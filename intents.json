@@ -1,0 +1,278 @@
+{
+    "intents": [
+        {
+            "tag": "Violencia_de_genero",
+            "patterns": ["¿Qué es la violencia de género?", "¿Violencia de género?", "¿Como es la violecia de genero?"],
+            "responses": [
+                "La violencia de género se refiere a cualquier  violencia o abuso dirigido contra una persona debido a su género. Esto puede adoptar diversas formas, como violencia doméstica, acoso sexual y discriminación.",
+                "La violencia de género se refiere a un acto de violencia dirigido contra alguien por su género, que suele afectar más a las mujeres debido a las desigualdades históricas y culturales.",
+                "La violencia de género es cualquier violencia física, sexual, mental o financiera dirigida contra una persona por su género."
+            ]        
+        },
+        {
+            "tag": "Tipos_de_violencia ",
+            "patterns": ["¿cuales son los tipos de violecia?", "¿Cuántos tipos de violecia existen?","¿tipos de Violecia?"],
+            "responses": [
+                "La violencia es una variedad de comportamiento agresivo o dañino que puede causar daño físico, psicológico o social a las personas.",
+                "Los tipos de violencia se refieren a las categorías o formas en que se manifiesta la agresión, el abuso o la coerción hacia otras personas o grupos. Estos tipos pueden incluir, entre otros, violencia física, psicológica, sexual y verbal.",
+                "Los tipos de violencia son las diversas formas en que se ejerce el poder o control de manera que daña a otra persona, ya sea mediante el uso de fuerza física, abuso emocional, explotación sexual, discriminación u opresión."
+            ]
+        },
+        {
+            "tag": "Violencia_domestica",
+            "patterns": ["¿Qué es la violencia domestica?", "¿violencia domestica?", "cómo combatir la violencia de género"],
+            "responses": [
+                "La violencia doméstica es un patrón de abuso físico, emocional, sexual o económico que ocurre en el contexto de una familia o convivencia, donde una persona intenta controlar y dominar a otra, generalmente en relaciones íntimas o familiares.",
+                "La violencia doméstica se caracteriza por actos de agresión y control de un miembro de la familia sobre otro, que pueden incluir palizas, amenazas, humillaciones, acoso sexual y control financiero, creando una atmósfera de miedo y subyugación.",
+                "La violencia doméstica es un fenómeno complejo que incluye cualquier forma de abuso o acoso que ocurre dentro de una familia o entorno de vida compartido, y puede afectar a personas de cualquier género, edad o condición social."
+            ]
+        },
+        {
+            "tag":"Causas_de_violencia_domestica",
+            "patterns":["¿Cuales son las causas de violencia domestica?","Causas de violencia domestica"],
+            "responses":[
+                "La violencia doméstica puede tener varias causas y una de las más destacadas es la desigualdad de poder y control en la relación. Cuando una persona intenta mantener o ejercer un control excesivo sobre su pareja o familiar, esto puede llevar a un comportamiento abusivo.",
+                "El factor subyacente de la violencia doméstica es el ciclo de abuso y trauma. Las personas que han sido abusadas en el pasado, ya sea en la infancia o en una relación anterior, tienen más probabilidades de repetir patrones de abuso en sus relaciones actuales.",
+                "Los problemas de salud mental y las adicciones no tratados, como el abuso de sustancias, pueden ser una causa importante de violencia doméstica, ya que pueden eliminar barreras para el abusador y aumentar la agresión hacia la pareja o los miembros de la familia."
+            ]
+        },
+        {
+            "tag":"Consecuencias_de_violencia_domestica",
+            "patterns":["¿Cuales son las consecuencias de Violencia domestica", "Consecuencias de violencia domestica"],
+            "responses":[
+                "Las consecuencias de la violencia doméstica son diversas y devastadoras. A nivel emocional y psicológico, la violencia puede provocar estrés, ansiedad, depresión y trastorno de estrés postraumático. Los niños de los hogares afectados también pueden experimentar consecuencias a largo plazo, como problemas de salud mental y la perpetuación de patrones de violencia en las generaciones futuras.",
+                "Las consecuencias de la violencia doméstica pueden ser devastadoras para las víctimas. Físicamente, pueden sufrir lesiones graves que van desde fracturas de huesos y hematomas hasta problemas de salud crónicos relacionados con el estrés continuo. Los niños que sufren violencia doméstica también pueden experimentar traumas y problemas de salud mental a largo plazo.",
+                "Las consecuencias de la violencia doméstica son de gran alcance y profundamente inquietantes. A nivel emocional, la violencia puede desencadenar problemas psicológicos como estrés, ansiedad, depresión y trastorno de estrés postraumático. Los niños que presencian violencia doméstica también pueden sufrir un trauma emocional y corren el riesgo de perpetuar patrones de abuso en sus propias relaciones en el futuro."
+                
+            ]
+        },
+        {
+            "tag":"Acoso_sexual",
+            "patterns":["¿Que es el acoso sexual?", "acoso sexual","Definicion de acoso sexual"],
+            "responses":[
+                "El acoso sexual se refiere a conductas no deseadas y de naturaleza sexual que incluyen comentarios, avances no solicitados, insinuaciones y comportamientos degradantes que crean un ambiente hostil y amenazante para la víctima",
+                "Se considera acoso sexual a cualquier forma de conducta no consensuada de carácter sexual que crea un ambiente incómodo, inseguro o humillante para la persona afectada, y que puede incluir tocamientos indeseados, comentarios lascivos y presiones para realizar actos sexuales.",
+                "El acoso sexual implica la imposición de atención o comportamientos de naturaleza sexual no deseados, a menudo con la intención de intimidar o ejercer poder sobre la víctima. Puede manifestarse de diversas formas, desde mensajes inapropiados en línea hasta conductas físicas ofensivas."
+            ]
+        },
+        {
+            "tag":"Causas_de_acoso_sexual",
+            "patterns":["¿Cuales son las causas de acoso sexual?", "Causas de acoso sexual"],
+            "responses":[
+                "El acoso sexual puede ser causado por la desigualdad de género y el abuso de poder, la falta de educación y conciencia sobre sus consecuencias, así como una cultura de tolerancia hacia el acoso.",
+                "Las causas del acoso sexual incluyen desigualdad de género y abuso de poder, falta de educación y conciencia sobre el tema, y la presencia de una cultura que tolera el acoso.",
+                "El acoso sexual se origina en la desigualdad de género y el abuso de poder, la falta de educación y conciencia, y una cultura que no sanciona adecuadamente el acoso."
+            ]
+        },
+        {
+            "tag":"Consecuencias_de_acoso_sexual",
+            "patterns":["¿Cuales son las consecuencias de acoso sexual?", "consecuencias de acoso sexual"],
+            "responses":[
+                "Las consecuencias del acoso sexual son graves e incluyen daño emocional, como ansiedad y depresión, problemas de salud mental, como el trastorno de estrés postraumático y un impacto negativo en la autoestima de la víctima.",
+                "Las víctimas de acoso sexual pueden experimentar daño emocional, incluyendo ansiedad, depresión. Además, el acoso puede tener un efecto perjudicial en su vida profesional y social, a menudo resultando en aislamiento y dificultades en el trabajo o en sus relaciones.",
+                "Las consecuencias del acoso sexual pueden abarcar daño emocional, como ansiedad y depresión, así como problemas de salud mental a largo plazo. También puede afectar la vida laboral y social de las víctimas, generando aislamiento y dificultades en su desempeño laboral o relaciones personales."
+            ]
+        },
+        
+        {
+            "tag": "Trata_de_personas",
+            "patterns": ["¿Que es trata de personas?", "Trata de personas","Definicion de trata de personas"],
+            "responses": [
+                "La trata de personas es un delito que involucra el reclutamiento, transporte o recepción de personas mediante engaño, coerción o fuerza, con el propósito de explotarlas en actividades como la prostitución, el trabajo forzado o la esclavitud.",
+                "Se considera trata de personas al acto de captar, transportar o retener a personas contra su voluntad, con el fin de explotarlas en diversas formas, como la explotación sexual, laboral o comercial.",
+                "La trata de personas abarca la actividad ilegal en la que individuos son reclutados o trasladados a través de medios engañosos, forzados o coaccionados, con el objetivo de explotarlos en situaciones de esclavitud moderna, prostitución o trabajos forzados."
+                
+            ]
+        },
+        {
+            "tag": "Causas_de_Trata_de_personas",
+            "patterns": ["¿Cuales son las causas de trata personas?", "Causas de Trata de personas"],
+            "responses": [
+                "una de las causas de trata de personas a menudo se origina en la pobreza y la falta de oportunidades económicas, que hacen que las personas sean vulnerables a la explotación.",
+                "En situaciones de conflictos armados y desplazamiento, las personas enfrentan condiciones precarias que las vuelven más susceptibles a la trata, especialmente cuando se combina con discriminación y marginación.",
+                "Las causas de la trata de personas, como la pobreza, el conflicto y la discriminación, a menudo interactúan y se refuerzan mutuamente, aumentando la vulnerabilidad de las personas a ser víctimas de este delito."
+            ]
+        },
+        {
+            "tag": "Consecuencias_de_Trata_de_personas",
+            "patterns": ["¿cuales son las consecuencias  de trata personas?", "Consecuencia de Trata de personas"],
+            "responses": [
+                "La trata de personas causa traumas físicos y psicológicos, además de pérdida de autonomía, al forzar a las víctimas a trabajos forzados o explotación sexual.",
+                "Genera desconfianza y miedo en las comunidades, contribuye a la desestabilización social y tiene un impacto económico negativo debido a la explotación laboral y la dependencia de asistencia social.",
+                "Socava valores fundamentales, amenaza la seguridad pública debido a sus vínculos con actividades criminales y genera costos significativos para sistemas de salud y justicia penal, además de contribuir a problemas de salud pública."    
+            ]
+        },
+        {
+            "tag": "Feminicidio",
+            "patterns": ["¿Que es feminicidio?","Deficion de feminicidio","Violencia de feminicidio"],
+            "responses": [
+                "El feminicidio se refiere al asesinato de mujeres debido a su género, manifestando una violencia extrema dirigida hacia ellas como resultado de desigualdades y actitudes misóginas arraigadas en la sociedad.",
+                "Se considera feminicidio al homicidio de mujeres que resulta de la discriminación y violencia de género, siendo un reflejo de la profunda desigualdad y la falta de respeto hacia las vidas de las mujeres.",
+                "El feminicidio implica el asesinato de mujeres debido a su identidad de género, resaltando la problemática de la violencia dirigida específicamente hacia ellas por razones de género. Es un trágico reflejo de la misoginia y la desvalorización de las vidas femeninas en la sociedad."    
+            ]
+        },
+        {
+            "tag": "Causas_de_feminicidio",
+            "patterns": ["¿cuales son las causas de feminicidio?","causas de feminicidio"],
+            "responses": [
+                "una de las causas es la discriminación y la percepción de inferioridad de las mujeres en la sociedad contribuyen al feminicidio.",
+                "las causas pueden ser por relaciones abusivas y la violencia en el hogar pueden desencadenar la escalada hacia el feminicidio.",
+                "La falta de consecuencias adecuadas para los agresores y la dificultad para obtener ayuda legal aumentan el riesgo de feminicidio."    
+            ]
+        },
+        {
+            "tag": "Consecuencias_de_feminicidio",
+            "patterns": ["¿Cuales son las consecuencias de feminicidio?","Consecuencias de feminicidio"],
+            "responses": [
+                "Una de las causas principales del feminicidio es la violencia de género arraigada en estructuras sociales y culturales que perpetúan la discriminación y el machismo.",
+                "Una de las causas del feminicidio es la impunidad, donde los agresores raramente enfrentan consecuencias legales significativas, lo que crea un ambiente propicio para la perpetuación de la violencia de género.",
+                "Otra causa del feminicidio es la falta de acceso a recursos y servicios de apoyo para las víctimas, lo que dificulta su escape de situaciones violentas y su capacidad para buscar ayuda."    
+            ]
+        },
+        {
+            "tag": "Trafico_de_mujeres_niños",
+            "patterns": ["¿Que es el trafico de mujeres y niños?","trafico de mujeres y niños","Definicion de trafico de mujeres y niñas"],
+            "responses": [
+                "El tráfico de mujeres y niñas implica la captación, transporte y explotación de individuos, en su mayoría mujeres y niñas, a través de medios engañosos, coercitivos o forzosos, con el propósito de someterlas a la explotación sexual, laboral o comercial.",
+                "Se considera tráfico de mujeres y niñas a la actividad ilegal en la que personas, en su mayoría mujeres jóvenes y niñas, son trasladadas contra su voluntad por redes criminales que buscan explotarlas en diversas formas, incluyendo la prostitución, la servidumbre o el trabajo forzado.",
+                "El tráfico de mujeres y niñas es el proceso mediante el cual personas, especialmente mujeres y niñas, son reclutadas, transportadas y explotadas a menudo a través de medios engañosos, con el objetivo de beneficiarse de la explotación sexual, la esclavitud moderna o el trabajo forzado."    
+            ]
+        },
+        {
+            "tag": "Causas_de_trafico_mujeres_niños",
+            "patterns": ["¿cuales son las causas de trafico de mujeres y niños?","Causas de trafico de mujeres y niños?"],
+            "responses": [
+                "Las causas del tráfico de mujeres y niños incluyen la pobreza extrema, la desigualdad de género y la falta de oportunidades.",
+                "Unas de las causas del tráfico de mujeres y niños son la violencia y los conflictos armados, así como la demanda de explotación sexual y laboral.",
+                "las causas del tráfico de mujeres y niños suelen estar relacionadas con la vulnerabilidad socioeconómica y la explotación, ya sea sexual o laboral."    
+            ]
+        },
+        {
+            "tag": "Consecuenias_de_trafico_mujeres_niños",
+            "patterns": ["¿cuales son las consecuencias de trafico de mujeres y niños?","Consecuencias de trafico de mujeres y niños?"],
+            "responses": [
+                "Las consecuencias del tráfico de mujeres y niños incluyen la explotación y abuso, el trauma y problemas de salud mental, la pérdida de derechos y libertades, el riesgo de enfermedades y lesiones, la interrupción del desarrollo infantil y la ruptura de familias y comunidades.",
+                "Las consecuencia del tráfico de mujeres y niños es la perpetuación de un ciclo de vulnerabilidad y explotación, ya que las víctimas que logran escapar a menudo enfrentan dificultades para reintegrarse a la sociedad y corren el riesgo de caer nuevamente en situaciones de tráfico debido a la falta de apoyo y oportunidades.",
+                "Las consecuencia adicional del tráfico de mujeres y niños es el impacto económico negativo en las comunidades de origen de las víctimas. Cuando mujeres y niños son traficados, a menudo se les priva de oportunidades de contribuir al desarrollo económico de sus comunidades, lo que puede mantener a estas comunidades en la pobreza y la dependencia."    
+            ]
+        },
+        {
+            "tag": "Violencia_fisica",
+            "patterns": ["¿Que es la violencia fisica?","Violencia fisica","como se da la violencia fisica"],
+            "responses": [
+                "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
+                "La violencia física es la acción de herir o lastimar a alguien mediante el uso de la fuerza física, como golpes, patadas o puñetazos.",
+                "La violencia física implica cualquier acto en el que una persona inflige daño físico a otra a través de acciones como agresiones físicas, asaltos o cualquier forma de violencia que tenga un componente físico evidente"    
+            ]
+        },
+        {
+            "tag": "Causas_de_violencia_fisica",
+            "patterns": ["¿cuales son las causas de la violencia fisica?","Causas de Violencia fisica"],
+            "responses": [
+                "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
+                "La violencia física puede ser el resultado de una incapacidad para resolver conflictos de manera pacífica y constructiva.",
+                "La violencia física puede aparecer como una manifestación extrema de la incapacidad de las personas para afrontar adecuadamente el conflicto o la tensión."
+            ]
+        },
+        {
+            "tag": "Cosecuencias_de_violencia_fisica",
+            "patterns": ["¿Que es la violencia fisica?","Violencia fisica","como se da la violencia fisica"],
+            "responses": [
+                "La violencia física puede contribuir a la perpetuación de ciclos de violencia en la sociedad y causar daños mentales y emocionales  a largo plazo tanto a las víctimas como a los perpetradores.",
+                "La violencia física conlleva graves consecuencias para todas las partes involucradas. Esto incluye lesiones físicas, trauma emocional, deterioro de relaciones, posibles problemas legales, costos financieros, efectos negativos en los niños testigos, y una contribución a la perpetuación de ciclos de violencia en la sociedad.",
+                "La violencia física tiene ramificaciones significativas. Puede causar daños físicos directos, así como un dolor emocional profundo en las víctimas. Esto puede llevar a la ruptura de relaciones y, en algunos casos, a un ciclo continuo de abuso."
+            ]
+        },
+        {
+            "tag": "Violencia_de_genero_en_linea",
+            "patterns": ["¿Que es la violencia de genero en linea?","Violencia en linea","como se da la violencia en linea"],
+            "responses": [
+                "La violencia de género en línea se refiere al uso de medios digitales para acosar, intimidar o difamar a personas debido a su género",
+                "La violencia de género en línea implica el uso de tecnología y plataformas en línea para llevar a cabo actos de acoso o discriminación basados en el género.",
+                "La violencia de género en línea consiste en el ciberacoso y la agresión en línea dirigidos específicamente hacia alguien debido a su género o identidad de género"    
+            ]
+        },
+        {
+            "tag": "Causas_de_violencia_de_genero_en_linea",
+            "patterns": ["¿Cuales son las causas de violencia de genero en linea?","Causas de violencia en linea"],
+            "responses": [
+                "Una de las causas de la violencia de género en línea es la persistencia de actitudes sexistas y discriminatorias que se manifiestan a través de la impunidad que brinda el anonimato en internet.",
+                "una causas importante de la violencia de género en línea es la falta de conciencia sobre los límites y el respeto hacia el consentimiento en las interacciones en línea, lo que lleva a situaciones de acoso y abuso en línea.",
+                "La falta de educación y sensibilización sobre la violencia de género en línea contribuye a este problema, ya que muchas personas no comprenden completamente cómo sus palabras y acciones en internet pueden dañar a otras personas y perpetuar estereotipos de género perjudiciales."
+            ]
+        },
+        {
+            "tag": "Consecuencias_de_violencia_de_genero_en_linea",
+            "patterns": ["¿Cuales son las causas de violencia de genero en linea?","Causas de violencia en linea"],
+            "responses": [
+                "Las consecuencias de la violencia de género en línea incluyen daño emocional, aislamiento social, daño a la reputación, limitaciones en la vida cotidiana, censura, riesgo de violencia física, costos legales y un impacto negativo en la sociedad en su conjunto, ya que perpetúa estereotipos de género perjudiciales y socava la igualdad de género.",
+                "Una de las consecuencias de la violencia de género en línea es el debilitamiento de la participación igualitaria y segura de las personas en el entorno digital, lo que socava la libertad de expresión y contribuye a la perpetuación de la desigualdad de género tanto en línea como en la sociedad en general.",
+                "Una de las consecuencia  de la violencia de género en línea es el impacto negativo en la salud mental de las víctimas, que puede llevar a la ansiedad, la depresión y otros problemas psicológicos. Esto puede tener efectos duraderos en la salud y el bienestar de las personas afectadas."
+            ]
+        },
+        {
+            "tag": "Violencia_institucional",
+            "patterns": ["¿Que es la violencia institucional?"," Violencia institucional","¿Como se da la violencia institucional"],
+            "responses": [
+                "La violencia institucional es la perpetrada o tolerada por instituciones con poder y autoridad, que causa daño o discrimina de manera estructural.",
+                "La violencia institucional involucra políticas, prácticas o actitudes de instituciones que perpetúan la injusticia o el abuso de poder.",
+                "La violencia institucional se refiere a la acción u omisión de instituciones que sistemáticamente causan daño o discriminación."
+           ]
+        },
+        {
+            "tag": "Causas_de_Violencia_institucional",
+            "patterns": ["¿Cuales son las causas de violencia institucional?","Causas de violencia institucional"],
+            "responses": [
+                "la violencia institucional puede tener múltiples causas, pero se relaciona principalmente con un abuso de poder por parte de instituciones gubernamentales o de autoridad.",
+                "la violencia institucional surge debido a la falta de rendición de cuentas, impunidad, discriminación y políticas institucionales que permiten el abuso de poder por parte de las autoridades.",
+                "La violencia institucional se produce debido a abusos de poder, impunidad, discriminación y políticas que permiten la violencia por parte de instituciones gubernamentales."
+            ]
+        },
+        {
+            "tag": "Consecuecias_de_Violencia_institucional",
+            "patterns": ["¿Cuales son las consecuencias de violencia institucional?","Consecuencias de violencia institucional"],
+            "responses": [
+                "las consecuencias de la violencia institucional incluyen daño físico y psicológico a las víctimas, desconfianza en las instituciones, injusticia, divisiones sociales, protestas y costos económicos. Esto debilita la seguridad, la cohesión social y la confianza en el gobierno.",
+                "Una de las consecuencias de La violencia institucional generalmente conduce a la erosión de la confianza en las instituciones gubernamentales, violaciones de derechos humanos y un impacto negativo en la estabilidad y el progreso social y económico de una sociedad.",
+                "La violencia institucional suele dar lugar a la pérdida de confianza en las instituciones gubernamentales, la vulneración de derechos fundamentales y un impacto negativo en la estabilidad social y el bienestar de la población afectada."
+           ]
+        },
+
+
+        {
+            "tag": "recursos_ayuda",
+            "patterns": ["dónde encontrar ayuda por violencia de género", "recursos para víctimas de violencia de género"],
+            "responses": [
+                "Si eres víctima de violencia de género o conoces a alguien que lo es, puedes comunicarte con líneas de ayuda como [número de teléfono] para recibir apoyo confidencial.",
+                "Existen refugios y centros de atención para víctimas de violencia de género, donde ofrecen seguridad, asesoramiento y ayuda legal.",
+                "Organizaciones como [nombres de organizaciones] también proporcionan recursos y orientación para ayudar a las víctimas a salir de situaciones abusivas.",
+                "Es importante buscar apoyo y hablar sobre la situación para poder tomar medidas para tu seguridad y bienestar."
+            ]
+        }
+        ,
+        {
+            "tag": "desconocido",
+            "patterns": ["*"],
+            "responses": [
+                "Lo siento, no te entiendo.",
+                "Parece que estoy un poco confundido con eso.",
+                "No estoy seguro de entender. ¿Podrías proporcionar más detalles o hablar de algo diferente?",
+                "Mis conocimientos son limitados y puede que no pueda ayudarte con eso en particular.",
+                "Puedes hacer otra pregunta, no dudes en preguntar."
+            ]
+        }
+        ,
+        {
+            "tag": "Conectores",
+            "patterns": ["como","porque","los","cuales","son","que","es","donde"],
+            "responses": [
+                "Lo siento, no te entiendo.",
+                "Parece que estoy un poco confundido con eso.",
+                "No estoy seguro de entender. ¿Podrías proporcionar más detalles o hablar de algo diferente?",
+                "Mis conocimientos son limitados y puede que no pueda ayudarte con eso en particular.",
+                "Puedes hacer otra pregunta, no dudes en preguntar."
+            ]
+        }
+
+    ]
+}

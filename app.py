@@ -11,10 +11,11 @@ import torch
 import nltk
 import unidecode
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 from keras.models import load_model
 import os
 from langdetect import detect 
-
+nltk.download('stopwords')
 app = Flask(__name__)
 
 # Ruta para recibir las solicitudes de WhatsApp

@@ -1,6 +1,52 @@
 {
     "intents": [
         {
+            "tag": "Saludo",
+            "patterns": ["Hola", "¡Hola!", "Buenos días"],
+            "responses": [
+                "¡Hola! Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia de género. ¿En qué puedo ayudarte hoy?",
+                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia de género. ¿Cómo puedo asistirte?",
+                "Buenos días. Soy un chatbot especializado en temas de violencia de género. ¿En qué puedo orientarte?"
+            ]
+        },
+        {
+            "tag": "Despedida",
+            "patterns": ["Gracias", "Adiós", "Hasta luego"],
+            "responses": [
+                "De nada, si tienes más preguntas en el futuro, no dudes en preguntar. ¡Cuídate!",
+                "Hasta luego. Siempre estoy aquí si necesitas más información o apoyo.",
+                "No hay problema, estoy disponible para ayudarte en cualquier momento. ¡Adiós!"
+            ]
+        },
+        {
+            "tag": "Agradecimiento",
+            "patterns": ["Gracias por la ayuda", "Te agradezco", "Estoy agradecido"],
+            "responses": [
+                "No hay de qué, siempre estoy aquí para ayudar. Si tienes más preguntas, no dudes en preguntar.",
+                "De nada, es un placer ayudarte. No dudes en contactarme si necesitas más información.",
+                "¡Gracias por tu agradecimiento! Estoy disponible para responder tus preguntas en cualquier momento."
+            ]
+        },
+        {
+            "tag": "No_entendido",
+            "patterns": ["No entiendo", "No sé qué hacer", "Confundido"],
+            "responses": [
+                "Entiendo que puedas sentirte confundido. Estoy aquí para proporcionarte información y orientación. ¿En qué puedo aclararte las dudas?",
+                "No te preocupes si no entiendes algo. Estoy aquí para ayudarte a obtener la información que necesitas.",
+                "Si te sientes confundido, no dudes en preguntar más. Estoy aquí para aclarar tus dudas."
+            ]
+        },
+        {
+            "tag": "Informativo",
+            "patterns": ["Cuéntame más", "Más información", "Explícame"],
+            "responses": [
+                "Claro, puedo proporcionarte información sobre la violencia de género, sus tipos y cómo buscar ayuda. ¿En qué tema específico estás interesado?",
+                "Estoy aquí para proporcionarte información detallada sobre la violencia de género. ¿Sobre qué aspecto te gustaría saber más?",
+                "¡Claro! Si deseas más información sobre la violencia de género, no dudes en preguntar. Estoy aquí para ayudarte."
+            ]
+        },
+    
+        {
             "tag": "Violencia_de_genero",
             "patterns": ["¿Qué es la violencia de género?", "¿Violencia de género?", "¿Como es la violecia de genero?"],
             "responses": [
@@ -237,8 +283,6 @@
                 "La violencia institucional suele dar lugar a la pérdida de confianza en las instituciones gubernamentales, la vulneración de derechos fundamentales y un impacto negativo en la estabilidad social y el bienestar de la población afectada."
            ]
         },
-
-
         {
             "tag": "recursos_ayuda",
             "patterns": ["dónde encontrar ayuda por violencia de género", "recursos para víctimas de violencia de género"],
@@ -261,7 +305,5 @@
                 "Puedes hacer otra pregunta, no dudes en preguntar."
             ]
         }
-     
-
     ]
 }

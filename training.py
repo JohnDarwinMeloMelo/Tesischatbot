@@ -44,7 +44,8 @@ for intent in intents['intents']:
     for pattern in intent['patterns']:
         pattern = unidecode.unidecode(pattern.lower())
         word_list = nltk.word_tokenize(pattern)
-        word_list = nltk.word_tokenize(pattern)
+         # Elimina las palabras de parada
+        word_list = [word for word in word_list if word.lower() not in stop_words]
         words.extend(word_list)
         documents.append((word_list, intent["tag"]))
         if intent["tag"] not in classes:

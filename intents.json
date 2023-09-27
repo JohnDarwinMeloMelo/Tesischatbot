@@ -261,18 +261,7 @@
                 "Puedes hacer otra pregunta, no dudes en preguntar."
             ]
         }
-        ,
-        {
-            "tag": "Conectores",
-            "patterns": ["como","porque","los","cuales","son","que","es","donde"],
-            "responses": [
-                "Lo siento, no te entiendo.",
-                "Parece que estoy un poco confundido con eso.",
-                "No estoy seguro de entender. ¿Podrías proporcionar más detalles o hablar de algo diferente?",
-                "Mis conocimientos son limitados y puede que no pueda ayudarte con eso en particular.",
-                "Puedes hacer otra pregunta, no dudes en preguntar."
-            ]
-        }
+     
 
     ]
 }

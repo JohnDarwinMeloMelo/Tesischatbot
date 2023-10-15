@@ -124,9 +124,14 @@ def webhook_whatsapp():
         
         
         #----------------------------------------INICIO DE MENSAJE 
+        def eliminar_palabras_de_parada(texto, idioma='spanish'):
+            palabras = nltk.word_tokenize(texto)
+            stop_words = set(stopwords.words(idioma))
+            palabras_filtradas = [palabra for palabra in palabras if palabra.lower() not in stop_words]
+            texto_procesado = ' '.join(palabras_filtradas)
+            return texto_procesado
         
-        
-        
+        #mensaje = pattern = eliminar_palabras_de_parada(mensaje, idioma='spanish')
         mensaje = unidecode.unidecode(mensaje.lower())
         print("mensaje 1: "+mensaje)
         

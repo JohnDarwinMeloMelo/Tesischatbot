@@ -3,9 +3,10 @@ import json
 import pickle
 import numpy as np
 import unidecode
+
 import nltk
 from nltk.stem import WordNetLemmatizer #Para pasar las palabras a su forma raíz
-from nltk.corpus import stopwords
+
 #Para crear la red neuronal
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
@@ -16,22 +17,11 @@ from keras.optimizers import SGD
 
 lemmatizer = WordNetLemmatizer()
 
-
-# Abre el archivo JSON con la codificación UTF-8
-with open('intents.json', 'r', encoding='utf-8') as file:
-    file_content = file.read()
-
-# Carga el contenido del archivo JSON en un objeto Python
-intents = json.loads(file_content)
-
-# intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json').read())
 
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
-nltk.download('stopwords')
-
-stop_words = set(stopwords.words('spanish'))  # Lista de stopwords en spanish
 
 words = []
 classes = []
@@ -40,12 +30,9 @@ ignore_letters = ['?', '!', '¿', '.', ',']
 
 #Clasifica los patrones y las categorías
 for intent in intents['intents']:
-    
     for pattern in intent['patterns']:
         pattern = unidecode.unidecode(pattern.lower())
         word_list = nltk.word_tokenize(pattern)
-         # Elimina las palabras de parada
-        word_list = [word for word in word_list if word.lower() not in stop_words]
         words.extend(word_list)
         documents.append((word_list, intent["tag"]))
         if intent["tag"] not in classes:
@@ -60,7 +47,18 @@ pickle.dump(classes, open('classes.pkl', 'wb'))
 #Pasa la información a unos y ceros según las palabras presentes en cada categoría para hacer el entrenamiento
 training = []
 output_empty = [0]*len(classes)
-
+"""
+for document in documents:
+    bag = []
+    word_patterns = document[0]
+    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
+    for word in words:
+        bag.append(1) if word in word_patterns else bag.append(0)
+    output_row = list(output_empty)
+    output_row[classes.index(document[1])] = 1
+    training.append([bag, output_row])
+    """
+########################################################################    
 
 for document in documents:
     bag = [0] * len(words)  # Inicializar bag con ceros

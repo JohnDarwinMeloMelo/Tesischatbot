@@ -67,11 +67,17 @@ def webhook_whatsapp():
         def clean_up_sentence(sentence):
             sentence_words = nltk.word_tokenize(sentence)
             sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
+            
+            mensaje2= " ".join(sentence_words)
+    
+            print("mensaje 2: "+ mensaje2)
             return sentence_words
 
         #Convertimos la información a unos y ceros según si están presentes en los patrones
         def bag_of_words(sentence):
+            
             sentence_words = clean_up_sentence(sentence)
+            
             bag = [0]*len(words)
             for w in sentence_words:
                 for i, word in enumerate(words):
@@ -122,7 +128,7 @@ def webhook_whatsapp():
         
         
         mensaje = unidecode.unidecode(mensaje.lower())
-
+        print("mensaje 1: "+mensaje)
         
         ints = predict_class(mensaje)
    

@@ -2,16 +2,16 @@
     "intents": [
         {
             "tag": "Saludo",
-            "patterns": ["Hola", "que tal", "Buenos días"],
+            "patterns": ["Hola", "que tal", "Buenos días", "buenas tardes", "buenas noches"],
             "responses": [
-                "¡Hola! Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia de género. ¿En qué puedo ayudarte hoy?",
+                "¡Hola! Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en genro de género. ¿En qué puedo ayudarte hoy?",
                 "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia de género. ¿Cómo puedo asistirte?",
                 "Buenos días. Soy un chatbot especializado en temas de violencia de género. ¿En qué puedo orientarte?"
             ]
         },
         {
             "tag": "Despedida",
-            "patterns": ["Gracias", "Adiós", "Hasta luego"],
+            "patterns": ["Gracias", "Adiós", "Hasta luego",	"chao"],
             "responses": [
                 "De nada, si tienes más preguntas en el futuro, no dudes en preguntar. ¡Cuídate!",
                 "Hasta luego. Siempre estoy aquí si necesitas más información o apoyo.",
@@ -58,7 +58,7 @@
         
         {
             "tag": "DiferenciaEntreSexoYGenero",
-            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo de género","Es lo mismo sexo y género","sexo y género"],
+            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo y género","Es lo mismo sexo y género","sexo y género"],
             "responses": [
                 "Sexo se refiere a las características biológicas, como genitales y cromosomas, que clasifican a una persona como hombre o mujer. Género se relaciona con las identidades, roles y expresiones sociales y personales asociadas a la feminidad y la masculinidad.",
                 "Sexo es biológico y se asigna al nacer, mientras que género es una construcción social y personal que puede variar de una cultura a otra.",
@@ -85,19 +85,20 @@
         },
         {
             "tag": "QueEsElGeneroBinario",
-            "patterns": ["Qué es género", "Cuál es tu definición de género", "Podrías explicarme qué significa género","Cuál es tu definición de género","género"],
+            "patterns": ["Qué es género", "Cuál es tu definición de género", "Podrías explicarme qué significa género binario","Cuál es tu definición de género binario","género binario"],
             "responses": [
-                "El género es la identidad personal de una persona relacionada con su sentido de ser hombre, mujer u otra identidad.",
-                "El género se refiere a cómo una persona se identifica en términos de masculino, femenino o cualquier otra identidad de género.",
-                "El género es la expresión social de la identidad de una persona en relación con las expectativas culturales de la feminidad y la masculinidad."
+                "Género binario: Masculino y femenino.",
+                "Tradicionalmente, se ha considerado que son las únicas dos identidades de género que son femenino y msaculino."
+                
             ]
         },
         
         {
             "tag": "DiferenciaEntreGeneroYIdentidadDeGenero",
-            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo de género","Es lo mismo sexo y género","sexo y género"],
+            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo de género","Es lo mismo sexo y género","género y identidad de género"],
             "responses": [
-                "Género es las expectativas sociales de ser hombre o mujer y identidad de Género es cómo una persona se identifica."
+                "Género es las expectativas sociales de ser hombre o mujer y identidad de Género es cómo una persona se identifica.",
+                "Diferencia de género se refiere a las normas y roles sociales asociados a ser masculino o femenino, mientras que la identidad de género es la forma en que una persona se siente y se identifica en términos de género."
             ]
         },
         
@@ -112,11 +113,40 @@
         
         {
             "tag": "TiposDeGenero",
-            "patterns": ["tipos de género","Tipos de identidad de género","clases de genero","clases de identidad de género" ],
+            "patterns": ["tipos de género","Tipos de identidad de género","clases de genero","clases tipo de genero de género","clases de genero" ],
             "responses": [
                 "Se refieren a las diferentes identidades de género que van más allá de la dicotomía tradicional hombre/mujer. Algunos ejemplos incluyen: hombre, mujer, transgénero, género no binario, género fluido, genderqueer, agénero, bigénero, tercer género y dos espíritus."
             ]
         },
+        {
+            "tag": "QuéEsViolenciaDeGénero",
+            "patterns": ["qué es la violencia de género", "Cómo se define la violencia de género","Explícame las formas en que se manifiesta la violencia de género","violencia de género","Que significa violencia de género" ],
+            "responses": [
+                "La violencia de género se refiere a cualquier acto o conducta que causa daño físico, sexual o psicológico a una persona debido a su género.",
+                "La Violencia de Género es cualquier maltrato específico hacia alguien debido a su género, usualmente mujeres, involucrando violencia física, sexual o psicológica para ejercer poder y control.",
+           			"La violencia de género se define como cualquier acto violento o abusivo que se dirige específicamente contra alguien debido a su género."
+           ]
+        },
+        {
+            "tag": "QuéEsViolenciaBasadaEnGénero",
+            "patterns": ["qué es la violencia basada en género", "Cómo se define la violencia basada en género","Explícame las formas en que se manifiesta la violencia basada en género","violencia basada en género","Que significa violencia basada en género","qué es la vbg", "Cómo se define la vbg","Explícame las formas en que se manifiesta la vbg","vbg","Que significa vbg" ],
+            "responses": [
+                "Violencia basada en género es cualquier forma de violencia que ocurre debido a las diferencias de género y las normas sociales que perpetúan la desigualdad entre hombres y mujeres.",
+                "Violencia basada en género es la violencia que se comete contra alguien debido a su género, afectando a personas de todas las identidades de género, pero que afecta principalmente a mujeres y niñas debido a las estructuras patriarcales.",
+           			"Violencia basada en género es cualquier actos de violencia, como física, sexual o emocional, que se perpetúan debido a las normas y expectativas sociales sobre el comportamiento apropiado para cada género."
+           ]
+        },
+        {
+            "tag": "DiferenciaViolenciaBasadaEnGéneroYViolenciaDeGenero",
+            "patterns": ["Cuál es la diferencia entre violencia basada en género y violencia de género", "distinción entre violencia basada en género y violencia de género","En qué se distingue violencia basada en género y violencia de género","Es lo mismo violencia basada en género y violencia de género","violencia basada en género y violencia de género","Es igual violencia basada en género y violencia de género","Cuál es la diferencia entre vbg y violencia de género", "distinción entre vbg y violencia de género","En qué se distingue vbg y violencia de género","Es lo mismo VBG y violencia de género","VBG y violencia de género","Es igua VBG y violencia de género"],
+            "responses": [
+                "Violencia de género se enfoca en la violencia que afecta a una persona debido a su género, generalmente mujeres víctimas de violencia por parte de hombres. Violencia basada en género (VBG) es un término más amplio que incluye cualquier violencia que se perpetra debido a las diferencias de género.",
+                "La violencia de género se dirige específicamente a las personas debido a su género, mientras que la violencia basada en género incluye la violencia que puede afectar a alguien debido a su identidad de género, orientación sexual u otras características relacionadas con el género.",
+           		"La violencia de género se centra en la desigualdad de género y la opresión de las mujeres, mientras que la violencia basada en género reconoce que las personas de todos los géneros pueden ser víctimas de violencia relacionada con las normas de género y roles sociales."
+           ]
+        },
+                
+        
 
         {
             "tag": "QueEsLaOrientacionSexual",
@@ -128,8 +158,8 @@
             ]
         },
         {
-            "tag": "OrientacionesSexuales",
-            "patterns": ["Cuántas orientaciones sexuales existen", "dime cuantas orientaciones sexuales existen","orientaciones sexuales"],
+            "tag": "CuantasOrientacionesSexuales",
+            "patterns": ["Cuántas orientaciones sexuales existen", "cuantas orientaciones sexuales","tipos orientaciones sexuales", "clases de orientaciones sexuales"],
             "responses": [
                 "Existen numerosas orientaciones sexuales, incluyendo heterosexualidad, homosexualidad, bisexualidad, pansexualidad y asexualidad, entre otras.",
                 "No hay una lista fija de orientaciones sexuales, ya que las experiencias son diversas. Sin embargo, algunas comunes son heterosexual, homosexual y bisexual, pero existen muchas más, como pansexual, asexual y demisexual.",
@@ -139,7 +169,7 @@
         
         {
             "tag": "heterosexualidad",
-            "patterns": ["Qué es la heterosexualidad"],
+            "patterns": ["Qué es la heterosexualidad", "Significado de heterosexualidad","Explícame qué significa la heterosexualidad", "heterosexualidad","heterosexual"],
             "responses": [
                 "Heterosexualidad es la orientación sexual en la que una persona siente atracción romántica y sexual hacia personas del sexo opuesto.",
                 "Heterosexualidad es cuando una persona se siente atraída emocional y sexualmente por individuos del género opuesto al suyo.",
@@ -148,7 +178,7 @@
         },
         {
             "tag": "Homosexualidad",
-            "patterns": ["Qué es la Homosexualidad"],
+            "patterns": ["Qué es la Homosexualidad","Significado de Homosexualidad","Explícame qué significa la Homosexualidad", "Homosexualidad","homosexual"],
             "responses": [
                 "Homosexualidad es la orientación sexual en la que una persona siente atracción romántica y sexual hacia personas del mismo sexo.",
                 "Homosexualidad es cuando alguien se siente atraído emocional y sexualmente por individuos del mismo género.",
@@ -157,7 +187,7 @@
         },
         {
             "tag": "Bisexualidad",
-            "patterns": ["Qué es la Bisexualidad"],
+            "patterns": ["Qué es la bisexualidad ","Significado de bisexualidad","Explícame qué significa la bisexualidad", "bisexualidad","bisexual"],
             "responses": [
                 "La bisexualidad es una orientación sexual en la que una persona se siente atraída emocional, romántica y/o sexualmente hacia individuos de más de un género, lo que puede incluir géneros masculinos, femeninos y no binarios.",
                 "La bisexualidad se refiere a la capacidad de una persona para experimentar atracción tanto hacia personas del mismo género como del género opuesto. Las personas bisexuales tienen la capacidad de establecer relaciones románticas y sexuales con individuos de diferentes identidades de género.",
@@ -166,7 +196,7 @@
         },
         {
             "tag": "Pansexualidad",
-            "patterns": ["Qué es la pansexualidad"],
+            "patterns": ["Qué es la pansexualidad","Significado de pansexualidad","Explícame qué significa pansexualidad", "pansexualidad","pansexual"],
             "responses": [
                 "La pansexualidad es la atracción hacia personas sin importar su género, incluyendo hombres, mujeres, y personas con identidades de género no binarias",
                 "La pansexualidad implica sentir atracción romántica, emocional y sexual hacia individuos independientemente de su identidad de género.",
@@ -176,7 +206,7 @@
        
         {
             "tag": "Asexualidad",
-            "patterns": ["Qué es asexualidad"],
+            "patterns": ["Qué es asexualidad","Significado de asexualidad","Explícame qué significa la asexualidad", "asexualidad","asexual"],
             "responses": [
                 "La asexualidad es una orientación sexual en la cual una persona no experimenta atracción sexual hacia otras personas.",
                 "La asexualidad es la falta de interés o deseo sexual hacia cualquier género o individuo. Las personas asexuales pueden experimentar conexiones emocionales y románticas, pero no sienten necesidad de actividad sexual.",
@@ -185,7 +215,7 @@
         },
         {
             "tag": "Demisexualidad",
-            "patterns": ["Qué es demisexualidad"],
+            "patterns": ["Qué es demisexualidad","Significado de demisexualidad","Explícame qué significa la demisexualidad", "demisexualidad","demisexual"],
             "responses": [
                 "La demisexualidad es la atracción sexual que se desarrolla solo después de establecer una conexión emocional fuerte con alguien.",
                 "La demisexualidad implica sentir atracción sexual solo cuando existe un lazo emocional profundo con la persona.",
@@ -194,7 +224,7 @@
         },
         {
             "tag": "Graysexualidad",
-            "patterns": ["Qué es graysexualidad"],
+            "patterns": ["Qué es la graysexualidad","Significado de graysexualidad","Explícame qué significa graysexualidad", "graysexualidad","graysexual"],
             "responses": [
                 "La graysexualidad es una orientación sexual en la que una persona experimenta atracción sexual en raras ocasiones o en circunstancias específicas.",
                 "La graysexualidad se refiere a alguien que experimenta atracción sexual de forma ocasional, fluctuante o en intensidad limitada.",
@@ -203,7 +233,7 @@
         },
         {
             "tag": "OrientacionSexualFluctuante",
-            "patterns": ["Qué es la orientación sexual fluctuante"],
+            "patterns": ["Qué es la orientación sexual fluctuante","orientación sexual fluctuante"],
             "responses": [
                 "La orientación sexual fluctuante se refiere a la capacidad de una persona para experimentar cambios en su atracción sexual a lo largo del tiempo.",
                 "Es cuando una persona experimenta variaciones en su atracción hacia diferentes géneros en momentos diferentes, sin adherirse a una orientación fija.",
@@ -221,7 +251,7 @@
         },
         {
             "tag": "QueEsLgbtiq",
-            "patterns": ["Qué es lgbtiq", "Significado de lgbtiq","Explícame qué significa lgbtiq", "lgbtiq"],
+            "patterns": ["Qué es lgbtiq", "Significado de lgbtiq","Explícame qué significa lgbtiq", "lgbtiq","lgbtiq+","lgb"],
             "responses": [
                 "LGBTIQ+ es un acrónimo que representa a lesbianas, gays, bisexuales, personas transgénero, intersexuales y el símbolo de más (+) denota inclusión para otras identidades sexuales y de género.",
                 "LGBTIQ+ es un término inclusivo que abarca diversas orientaciones sexuales y identidades de género, como lesbianas, gays, bisexuales, personas transgénero, intersexuales y otras identidades no conformes con las normas tradicionales.",
@@ -230,7 +260,7 @@
         },
         {
             "tag": "PersonasLesbianas",
-            "patterns": ["Qué es una persona lesbiana"],
+            "patterns": ["Qué es una persona lesbiana","Qué es lesbiana","Significado de lesbiana","Explícame qué significa lesbiana", "lesbiana"],
             "responses": [
                 "Lesbianas son mujeres que tienen atracción romántica, emocional y/o sexual hacia otras mujeres.",
                 "El término lesbianas se refiere a mujeres homosexuales, es decir, mujeres que tienen relaciones románticas y sexuales con otras mujeres.",
@@ -239,7 +269,7 @@
         },
         {
             "tag": "PersonasGays",
-            "patterns": ["Qué es una persona gay"],
+            "patterns": ["Qué es Persona gay ","Significado gay","Explícame qué significa gay", "gay"],
             "responses": [
                 "Gays son hombres que tienen atracción romántica, emocional y/o sexual hacia otros hombres.",
                 "El término gays se refiere a hombres homosexuales, es decir, hombres que tienen relaciones románticas y sexuales con otros hombres.",
@@ -248,7 +278,7 @@
         },
         {
             "tag": "Trangenero",
-            "patterns": ["Qué es Trangénero"],
+            "patterns": ["Qué es Persona Trangénero","Qué es Trangénero","Qué es Trangénero","Significado de Trangénero","Explícame qué significa Trangénero", "Trangénero"],
             "responses": [
                 "Transgénero es un término que se refiere a personas cuya identidad de género difiere del sexo asignado al nacer.",
                 "Transgénero describe a individuos cuya identidad de género no coincide con el género que se les asignó al nacer, y pueden tomar medidas para vivir de acuerdo con su identidad de género.",
@@ -256,7 +286,7 @@
             ]
         },{
             "tag": "Intersexual",
-            "patterns": ["Qué es intersexual"],
+            "patterns": ["Qué es Intersexual","Significado Intersexual","Explícame qué significa Intersexual", "Intersexual"],
             "responses": [
                 "Intersexual es un término que se refiere a personas que nacen con características sexuales que no se ajustan típicamente a las definiciones de sexo masculino o femenino.",
                 "Las personas intersexuales tienen variaciones biológicas en sus características sexuales, como genitales, cromosomas o hormonas, que no se alinean claramente con las definiciones tradicionales de masculino o femenino.",
@@ -284,8 +314,166 @@
                 "Es importante buscar apoyo y hablar sobre la situación para poder tomar medidas para tu seguridad y bienestar."
             ]
         }
+        ,
+        {
+            "tag": "PerspectivaDeDerechos",
+            "patterns": ["Perspectiva de Derechos"],
+            "responses": [
+                "La perspectiva de derechos reconoce a las personas como titulares activas de derechos civiles, políticos, económicos, sociales y culturales, que son universales e interdependientes.",
+                "Los derechos son indivisibles, universales e irrenunciables, reconociendo a las personas como ciudadanas libres con un conjunto completo de derechos."
+                ]
+        }
+        ,
+        {
+            "tag": "PerspectivaDeGénero",
+            "patterns": ["Perspectiva de Género"],
+            "responses": [
+                "La perspectiva de género es una herramienta que destaca las desigualdades entre hombres y mujeres, incluyendo a personas con diversas identidades y orientaciones de género que enfrentan discriminación por cuestionar las normas heteronormativas y binarias de género.",
+                "La perspectiva de género revela desigualdades en las relaciones entre hombres y mujeres, reconociendo también a personas con identidades y orientaciones de género diversas que desafían las normas tradicionales de género, lo que a menudo resulta en discriminación."
+                ]
+        }
 
         ,
+        {
+            "tag": "QueEsViolencia ",
+            "patterns": ["Qué es violencia", "Significado de violencia","Explícame qué significa violencia", "violencia"],
+            "responses": [
+                "f"
+                
+                ]
+        }
+        ,
+        {
+            "tag": "TiposDeViolencia ",
+            "patterns": ["cuales son los tipos de violencia", "Cuántos tipos de violencia existen","tipos de Violencia","clases de violencia"],
+            "responses": [
+                "Los tipos de violencia se refieren a las categorías o formas en que se manifiesta la agresión, el abuso o la coerción hacia otras personas o grupos. Estos tipos pueden incluir, entre otros, violencia física, psicológica, sexual y verbal.",
+                "Los tipos de violencia son las diversas formas en que se ejerce el poder o control de manera que daña a otra persona, ya sea mediante el uso de fuerza física, abuso emocional, explotación sexual, discriminación u opresión."
+                ]
+        }
+        ,
+        {
+            "tag": "ConsecuenciasDeViolencia",
+            "patterns": ["Que hago si soy victima de violencia", "a quien acudo si soy victima de violencia","que medidas tomo si soy victima de violencia","victima de violencia"],
+            "responses": [
+            			"Sin respuesta"
+                ]
+        }
+        ,
+        {
+            "tag": "CausasDeViolencia",
+            "patterns": ["causa de violencia"],
+            "responses": [
+                "Sin respuesta"
+                ]
+        }
+        ,
+        {
+            "tag": "QueHacerVictimaViolencia",
+            "patterns": ["Que hago si soy Víctimas de violencia", "a quien acudo si soy Víctimas de violencia","que medidas tomo si soy Víctimas de violencia","Víctima de violencia"],
+            "responses": [
+                "sin respuesta"
+                ]
+        }
+        ,
+        {
+            "tag": "SeñalesVictimaViolencia",
+            "patterns": ["como saber si soy victima de violencia"],
+            "responses": [
+                "sin respuesta"
+                ]
+        }
+        ,
+
+        {
+            "tag": "QueEsExpresiónDeGenero",
+            "patterns": ["Qué es expresión de género", "Puedes explicar en detalle qué es la expresión de género","expresión de género"],
+            "responses": [
+                "La expresión de género es cómo una persona muestra su identidad a través de comportamientos y apariencia, que pueden ser conformes o no conformes a las expectativas sociales de género.",
+                "Es la forma en que alguien se presenta al mundo, incluyendo la ropa, el peinado y el comportamiento, reflejando su identidad de género interna.",
+                "La expresión de género es la manera en que una persona comunica su identidad a través de su apariencia y comportamiento, pudiendo ser tradicional o divergente respecto a las normas de género establecidas."
+            ]
+        },
+        {
+            "tag": "QuiénMuestraLaExpresiónDeGenero",
+            "patterns": ["Quién muestra la expresión de género", "Explícame en detalle quién muestra la expresión de género","personas que muestran la expresión de género"],
+            "responses": [
+                "Todas las personas, independientemente de su identidad de género, muestran expresión de género a través de su apariencia y comportamiento.",
+                "La expresión de género es una característica común a todas las personas, no limitada a un grupo específico.",
+                "Cada individuo tiene su propia forma única de expresar su género, independientemente de su identidad de género, a través de su comportamiento y apariencia."
+            ]
+        },
+        {
+            "tag": "CómoSeManifiestaLaExpresiónDeGenero",
+            "patterns": ["Cómo se manifiesta la expresión de género", "Explícame Cómo se manifiesta la expresión de género","De qué forma se manifiesta la expresión de género"],
+            "responses": [
+                "La expresión de género se manifiesta a través de la forma de vestir, el comportamiento y las interacciones sociales de una persona.",
+                "Se refleja en la elección de ropa, gestos y roles que una persona adopta, mostrando su identidad de género.",
+                "La expresión de género se ve en la apariencia, comportamiento y relaciones de una persona, indicando cómo se identifican internamente en términos de género."
+            ]
+        },
+        {
+            "tag": "PorquéSeDaLaExpresiónDeGenero",
+            "patterns": ["Porque se da la expresión de género", "Explícame porque se da la expresión de género","porqué surge la expresión de género"],
+            "responses": [
+                "Las expresiones de género surgen de la diversidad natural de las personas y cómo cada individuo se relaciona con las expectativas sociales de género.",
+                "Están influenciadas por factores biológicos, sociales y culturales, lo que lleva a una amplia variedad de identidades y formas de expresar el género.",
+                "Cada persona es única, lo que resulta en una diversidad de expresiones de género, ya que cada individuo interpreta y vive su identidad de género de manera diferente."
+            ]
+        },
+        {
+            "tag": "QuéEsViolenciaFisica",
+            "patterns": ["Que es la violencia fisica","Violencia fisica","Explícame el concepto de violencia física"],
+            "responses": [
+                "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
+                "La violencia física es la acción de herir o lastimar a alguien mediante el uso de la fuerza física, como golpes, patadas o puñetazos.",
+                "La violencia física implica cualquier acto en el que una persona inflige daño físico a otra a través de acciones como agresiones físicas, asaltos o cualquier forma de violencia que tenga un componente físico evidente"    
+            ]
+        },
+        {
+            "tag": "CuálesSonLosSignosDeViolenciaFísica",
+            "patterns": ["Cuáles son los signos físicos de la violencia física","Háblame sobre los signos de violencia física","Explícame los signos de violencia física"],
+            "responses": [
+                "Los signos de violencia física incluyen lesiones inexplicables, dolor persistente y cambios emocionales.",
+                "Los signos de violencia física incluyen lesiones inexplicables, dolor persistente y cambios emocionales como miedo o evitación del contacto físico.",
+                "Los signos de violencia física incluyen lesiones visibles, dolor persistente, dificultades para moverse y cambios emocionales como miedo o evitación del contacto físico. "    
+            ]
+        },
+        {
+            "tag": "DóndeSeDaLaViolenciaFísica",
+            "patterns": ["En qué lugares se da la violencia física","Explícame los entornos donde ocurre la violencia física","Dónde se da la violencia física"],
+            "responses": [
+                "La violencia física se manifiesta en diversos contextos, incluyendo relaciones familiares y de pareja, conflictos escolares y peleas comunitarias. También ocurre en instituciones y puede dirigirse hacia niños o incluso ser autodirigida.",
+                "Los tipos de violencia física abarcan agresiones en el hogar, parejas íntimas, escuelas y comunidades. Además, se observa en instituciones y puede afectar a niños y adultos. Incluso las autolesiones son consideradas una forma de violencia física.",
+                "La violencia física se presenta en diferentes ámbitos, como el hogar, relaciones románticas, escuelas y espacios públicos."    
+            ]
+        },
+        {
+            "tag": "RecursosDeApoyoDeViolenciaFísica",
+            "patterns": ["Existen recursos de apoyo para las personas que han sido víctimas de violencia física"],
+            "responses": [
+                "sin respuesta"  
+            ]
+        },
+
+        {
+            "tag": "CuálesSonLasCausasDeViolenciaFísica",
+            "patterns": ["Cuáles son las causas más comunes de la violencia física","Cuáles son las principales causas de la violencia física","Causas de Violencia física"],
+            "responses": [
+                "La violencia física puede originarse por desigualdades económicas, discriminación, problemas de salud mental y normas culturales que toleran la agresión. También puede surgir de experiencias traumáticas en la infancia y entornos violentos.",
+                "La violencia física tiene raíces en desigualdades sociales, discriminación y falta de acceso a recursos. Factores como problemas de salud mental y exposición a la violencia en la infancia también contribuyen a su aparición.",
+                "La violencia física se origina en factores complejos como desigualdades económicas, discriminación y normas culturales tolerantes hacia la agresión. Problemas de salud mental, historiales de abuso y entornos violentos también están implicados en su aparición."
+            ]
+        },
+        {
+            "tag": "CuálesSonLasConsecuenciasDeViolenciaFísica",
+            "patterns": ["Cuáles son las consecuencias de la violencia física","Háblame sobre las consecuencias de la violencia física","Consecuencias fisicas"],
+            "responses": [
+                "La violencia física puede contribuir a la perpetuación de ciclos de violencia en la sociedad y causar daños mentales y emocionales  a largo plazo tanto a las víctimas como a los perpetradores.",
+                "La violencia física conlleva graves consecuencias para todas las partes involucradas. Esto incluye lesiones físicas, trauma emocional, deterioro de relaciones, posibles problemas legales, costos financieros, efectos negativos en los niños testigos, y una contribución a la perpetuación de ciclos de violencia en la sociedad.",
+                "La violencia física tiene ramificaciones significativas. Puede causar daños físicos directos, así como un dolor emocional profundo en las víctimas. Esto puede llevar a la ruptura de relaciones y, en algunos casos, a un ciclo continuo de abuso."
+            ]
+        },
         {
             "tag": "desconocido",
             "patterns": ["*"],
@@ -298,245 +486,7 @@
             ]
         }
 
-        ,
-    
-        {
-            "tag": "ViolenciaDeGenero",
-            "patterns": ["Qué es la violencia de género", "Violencia de género", "Como es la violencia de genero"],
-            "responses": [
-                "La violencia de género se refiere a cualquier  violencia o abuso dirigido contra una persona debido a su género. Esto puede adoptar diversas formas, como violencia doméstica, acoso sexual y discriminación.",
-                "La violencia de género se refiere a un acto de violencia dirigido contra alguien por su género, que suele afectar más a las mujeres debido a las desigualdades históricas y culturales.",
-                "La violencia de género es cualquier violencia física, sexual, mental o financiera dirigida contra una persona por su género."
-            ]        
-        },
-        {
-            "tag": "TiposDeViolencia ",
-            "patterns": ["cuales son los tipos de violencia", "Cuántos tipos de violencia existen","tipos de Violencia"],
-            "responses": [
-                "La violencia es una variedad de comportamiento agresivo o dañino que puede causar daño físico, psicológico o social a las personas.",
-                "Los tipos de violencia se refieren a las categorías o formas en que se manifiesta la agresión, el abuso o la coerción hacia otras personas o grupos. Estos tipos pueden incluir, entre otros, violencia física, psicológica, sexual y verbal.",
-                "Los tipos de violencia son las diversas formas en que se ejerce el poder o control de manera que daña a otra persona, ya sea mediante el uso de fuerza física, abuso emocional, explotación sexual, discriminación u opresión."
-            ]
-        },
-        {
-            "tag": "ViolenciaDomestica",
-            "patterns": ["Qué es la violencia domestica", "violencia domestica", "cómo combatir la violencia de género"],
-            "responses": [
-                "La violencia doméstica es un patrón de abuso físico, emocional, sexual o económico que ocurre en el contexto de una familia o convivencia, donde una persona intenta controlar y dominar a otra, generalmente en relaciones íntimas o familiares.",
-                "La violencia doméstica se caracteriza por actos de agresión y control de un miembro de la familia sobre otro, que pueden incluir palizas, amenazas, humillaciones, acoso sexual y control financiero, creando una atmósfera de miedo y subyugación.",
-                "La violencia doméstica es un fenómeno complejo que incluye cualquier forma de abuso o acoso que ocurre dentro de una familia o entorno de vida compartido, y puede afectar a personas de cualquier género, edad o condición social."
-            ]
-        },
-        {
-            "tag":"CausasDeViolenciaDomestica",
-            "patterns":["Cuales son las causas de violencia domestica","Causas de violencia domestica"],
-            "responses":[
-                "La violencia doméstica puede tener varias causas y una de las más destacadas es la desigualdad de poder y control en la relación. Cuando una persona intenta mantener o ejercer un control excesivo sobre su pareja o familiar, esto puede llevar a un comportamiento abusivo.",
-                "El factor subyacente de la violencia doméstica es el ciclo de abuso y trauma. Las personas que han sido abusadas en el pasado, ya sea en la infancia o en una relación anterior, tienen más probabilidades de repetir patrones de abuso en sus relaciones actuales.",
-                "Los problemas de salud mental y las adicciones no tratados, como el abuso de sustancias, pueden ser una causa importante de violencia doméstica, ya que pueden eliminar barreras para el abusador y aumentar la agresión hacia la pareja o los miembros de la familia."
-            ]
-        },
-        {
-            "tag":"ConsecuenciasDeViolenciaDomestica",
-            "patterns":["Cuales son las consecuencias de Violencia domestica", "Consecuencias de violencia domestica"],
-            "responses":[
-                "Las consecuencias de la violencia doméstica son diversas y devastadoras. A nivel emocional y psicológico, la violencia puede provocar estrés, ansiedad, depresión y trastorno de estrés postraumático. Los niños de los hogares afectados también pueden experimentar consecuencias a largo plazo, como problemas de salud mental y la perpetuación de patrones de violencia en las generaciones futuras.",
-                "Las consecuencias de la violencia doméstica pueden ser devastadoras para las víctimas. Físicamente, pueden sufrir lesiones graves que van desde fracturas de huesos y hematomas hasta problemas de salud crónicos relacionados con el estrés continuo. Los niños que sufren violencia doméstica también pueden experimentar traumas y problemas de salud mental a largo plazo.",
-                "Las consecuencias de la violencia doméstica son de gran alcance y profundamente inquietantes. A nivel emocional, la violencia puede desencadenar problemas psicológicos como estrés, ansiedad, depresión y trastorno de estrés postraumático. Los niños que presencian violencia doméstica también pueden sufrir un trauma emocional y corren el riesgo de perpetuar patrones de abuso en sus propias relaciones en el futuro."
-                
-            ]
-        },
-        {
-            "tag":"AcosoSexual",
-            "patterns":["Que es el acoso sexual", "acoso sexual","Definicion de acoso sexual"],
-            "responses":[
-                "El acoso sexual se refiere a conductas no deseadas y de naturaleza sexual que incluyen comentarios, avances no solicitados, insinuaciones y comportamientos degradantes que crean un ambiente hostil y amenazante para la víctima",
-                "Se considera acoso sexual a cualquier forma de conducta no consensuada de carácter sexual que crea un ambiente incómodo, inseguro o humillante para la persona afectada, y que puede incluir tocamientos indeseados, comentarios lascivos y presiones para realizar actos sexuales.",
-                "El acoso sexual implica la imposición de atención o comportamientos de naturaleza sexual no deseados, a menudo con la intención de intimidar o ejercer poder sobre la víctima. Puede manifestarse de diversas formas, desde mensajes inapropiados en línea hasta conductas físicas ofensivas."
-            ]
-        },
-        {
-            "tag":"CausasDeAcosoSexual",
-            "patterns":["Cuales son las causas de acoso sexual", "Causas de acoso sexual"],
-            "responses":[
-                "El acoso sexual puede ser causado por la desigualdad de género y el abuso de poder, la falta de educación y conciencia sobre sus consecuencias, así como una cultura de tolerancia hacia el acoso.",
-                "Las causas del acoso sexual incluyen desigualdad de género y abuso de poder, falta de educación y conciencia sobre el tema, y la presencia de una cultura que tolera el acoso.",
-                "El acoso sexual se origina en la desigualdad de género y el abuso de poder, la falta de educación y conciencia, y una cultura que no sanciona adecuadamente el acoso."
-            ]
-        },
-        {
-            "tag":"ConsecuenciasDeAcosoSexual",
-            "patterns":["Cuales son las consecuencias de acoso sexual", "consecuencias de acoso sexual"],
-            "responses":[
-                "Las consecuencias del acoso sexual son graves e incluyen daño emocional, como ansiedad y depresión, problemas de salud mental, como el trastorno de estrés postraumático y un impacto negativo en la autoestima de la víctima.",
-                "Las víctimas de acoso sexual pueden experimentar daño emocional, incluyendo ansiedad, depresión. Además, el acoso puede tener un efecto perjudicial en su vida profesional y social, a menudo resultando en aislamiento y dificultades en el trabajo o en sus relaciones.",
-                "Las consecuencias del acoso sexual pueden abarcar daño emocional, como ansiedad y depresión, así como problemas de salud mental a largo plazo. También puede afectar la vida laboral y social de las víctimas, generando aislamiento y dificultades en su desempeño laboral o relaciones personales."
-            ]
-        },
         
-        {
-            "tag": "TrataDePersonas",
-            "patterns": ["Que es trata de personas", "Trata de personas","Definicion de trata de personas"],
-            "responses": [
-                "La trata de personas es un delito que involucra el reclutamiento, transporte o recepción de personas mediante engaño, coerción o fuerza, con el propósito de explotarlas en actividades como la prostitución, el trabajo forzado o la esclavitud.",
-                "Se considera trata de personas al acto de captar, transportar o retener a personas contra su voluntad, con el fin de explotarlas en diversas formas, como la explotación sexual, laboral o comercial.",
-                "La trata de personas abarca la actividad ilegal en la que individuos son reclutados o trasladados a través de medios engañosos, forzados o coaccionados, con el objetivo de explotarlos en situaciones de esclavitud moderna, prostitución o trabajos forzados."
-                
-            ]
-        },
-        {
-            "tag": "CausasDeTrataDePersonas",
-            "patterns": ["Cuales son las causas de trata personas", "Causas de Trata de personas"],
-            "responses": [
-                "una de las causas de trata de personas a menudo se origina en la pobreza y la falta de oportunidades económicas, que hacen que las personas sean vulnerables a la explotación.",
-                "En situaciones de conflictos armados y desplazamiento, las personas enfrentan condiciones precarias que las vuelven más susceptibles a la trata, especialmente cuando se combina con discriminación y marginación.",
-                "Las causas de la trata de personas, como la pobreza, el conflicto y la discriminación, a menudo interactúan y se refuerzan mutuamente, aumentando la vulnerabilidad de las personas a ser víctimas de este delito."
-            ]
-        },
-        {
-            "tag": "ConsecuenciasDeTrataDePersonas",
-            "patterns": ["cuales son las consecuencias  de trata personas", "Consecuencia de Trata de personas"],
-            "responses": [
-                "La trata de personas causa traumas físicos y psicológicos, además de pérdida de autonomía, al forzar a las víctimas a trabajos forzados o explotación sexual.",
-                "Genera desconfianza y miedo en las comunidades, contribuye a la desestabilización social y tiene un impacto económico negativo debido a la explotación laboral y la dependencia de asistencia social.",
-                "Socava valores fundamentales, amenaza la seguridad pública debido a sus vínculos con actividades criminales y genera costos significativos para sistemas de salud y justicia penal, además de contribuir a problemas de salud pública."    
-            ]
-        },
-        {
-            "tag": "Feminicidio",
-            "patterns": ["Que es feminicidio","Deficion de feminicidio","Violencia de feminicidio"],
-            "responses": [
-                "El feminicidio se refiere al asesinato de mujeres debido a su género, manifestando una violencia extrema dirigida hacia ellas como resultado de desigualdades y actitudes misóginas arraigadas en la sociedad.",
-                "Se considera feminicidio al homicidio de mujeres que resulta de la discriminación y violencia de género, siendo un reflejo de la profunda desigualdad y la falta de respeto hacia las vidas de las mujeres.",
-                "El feminicidio implica el asesinato de mujeres debido a su identidad de género, resaltando la problemática de la violencia dirigida específicamente hacia ellas por razones de género. Es un trágico reflejo de la misoginia y la desvalorización de las vidas femeninas en la sociedad."    
-            ]
-        },
-        {
-            "tag": "CausasDeFeminicidio",
-            "patterns": ["cuales son las causas de feminicidio","causas de feminicidio"],
-            "responses": [
-                "una de las causas es la discriminación y la percepción de inferioridad de las mujeres en la sociedad contribuyen al feminicidio.",
-                "las causas pueden ser por relaciones abusivas y la violencia en el hogar pueden desencadenar la escalada hacia el feminicidio.",
-                "La falta de consecuencias adecuadas para los agresores y la dificultad para obtener ayuda legal aumentan el riesgo de feminicidio."    
-            ]
-        },
-        {
-            "tag": "ConsecuenciasDeFeminicidio",
-            "patterns": ["Cuales son las consecuencias de feminicidio","Consecuencias de feminicidio"],
-            "responses": [
-                "Una de las causas principales del feminicidio es la violencia de género arraigada en estructuras sociales y culturales que perpetúan la discriminación y el machismo.",
-                "Una de las causas del feminicidio es la impunidad, donde los agresores raramente enfrentan consecuencias legales significativas, lo que crea un ambiente propicio para la perpetuación de la violencia de género.",
-                "Otra causa del feminicidio es la falta de acceso a recursos y servicios de apoyo para las víctimas, lo que dificulta su escape de situaciones violentas y su capacidad para buscar ayuda."    
-            ]
-        },
-        {
-            "tag": "TraficoDeMujeresNiños",
-            "patterns": ["Que es el trafico de mujeres y niños","trafico de mujeres y niños","Definicion de trafico de mujeres y niñas"],
-            "responses": [
-                "El tráfico de mujeres y niñas implica la captación, transporte y explotación de individuos, en su mayoría mujeres y niñas, a través de medios engañosos, coercitivos o forzosos, con el propósito de someterlas a la explotación sexual, laboral o comercial.",
-                "Se considera tráfico de mujeres y niñas a la actividad ilegal en la que personas, en su mayoría mujeres jóvenes y niñas, son trasladadas contra su voluntad por redes criminales que buscan explotarlas en diversas formas, incluyendo la prostitución, la servidumbre o el trabajo forzado.",
-                "El tráfico de mujeres y niñas es el proceso mediante el cual personas, especialmente mujeres y niñas, son reclutadas, transportadas y explotadas a menudo a través de medios engañosos, con el objetivo de beneficiarse de la explotación sexual, la esclavitud moderna o el trabajo forzado."    
-            ]
-        },
-        {
-            "tag": "CausasDeTraficoMujeresNiños",
-            "patterns": ["cuales son las causas de trafico de mujeres y niños","Causas de trafico de mujeres y niños"],
-            "responses": [
-                "Las causas del tráfico de mujeres y niños incluyen la pobreza extrema, la desigualdad de género y la falta de oportunidades.",
-                "Unas de las causas del tráfico de mujeres y niños son la violencia y los conflictos armados, así como la demanda de explotación sexual y laboral.",
-                "las causas del tráfico de mujeres y niños suelen estar relacionadas con la vulnerabilidad socioeconómica y la explotación, ya sea sexual o laboral."    
-            ]
-        },
-        {
-            "tag": "ConsecueniasDeTraficoMujeresNiños",
-            "patterns": ["cuales son las consecuencias de trafico de mujeres y niños","Consecuencias de trafico de mujeres y niños"],
-            "responses": [
-                "Las consecuencias del tráfico de mujeres y niños incluyen la explotación y abuso, el trauma y problemas de salud mental, la pérdida de derechos y libertades, el riesgo de enfermedades y lesiones, la interrupción del desarrollo infantil y la ruptura de familias y comunidades.",
-                "Las consecuencia del tráfico de mujeres y niños es la perpetuación de un ciclo de vulnerabilidad y explotación, ya que las víctimas que logran escapar a menudo enfrentan dificultades para reintegrarse a la sociedad y corren el riesgo de caer nuevamente en situaciones de tráfico debido a la falta de apoyo y oportunidades.",
-                "Las consecuencia adicional del tráfico de mujeres y niños es el impacto económico negativo en las comunidades de origen de las víctimas. Cuando mujeres y niños son traficados, a menudo se les priva de oportunidades de contribuir al desarrollo económico de sus comunidades, lo que puede mantener a estas comunidades en la pobreza y la dependencia."    
-            ]
-        },
-        {
-            "tag": "ViolenciaFisica",
-            "patterns": ["Que es la violencia fisica","Violencia fisica","como se da la violencia fisica"],
-            "responses": [
-                "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
-                "La violencia física es la acción de herir o lastimar a alguien mediante el uso de la fuerza física, como golpes, patadas o puñetazos.",
-                "La violencia física implica cualquier acto en el que una persona inflige daño físico a otra a través de acciones como agresiones físicas, asaltos o cualquier forma de violencia que tenga un componente físico evidente"    
-            ]
-        },
-        {
-            "tag": "CausasDeViolenciaFisica",
-            "patterns": ["cuales son las causas de la violencia fisicas","Causas de Violencia fisica"],
-            "responses": [
-                "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
-                "La violencia física puede ser el resultado de una incapacidad para resolver conflictos de manera pacífica y constructiva.",
-                "La violencia física puede aparecer como una manifestación extrema de la incapacidad de las personas para afrontar adecuadamente el conflicto o la tensión."
-            ]
-        },
-        {
-            "tag": "CosecuenciasDeViolenciaFisica",
-            "patterns": ["Que es la violencia fisica","Violencia fisica","como se da la violencia fisica"],
-            "responses": [
-                "La violencia física puede contribuir a la perpetuación de ciclos de violencia en la sociedad y causar daños mentales y emocionales  a largo plazo tanto a las víctimas como a los perpetradores.",
-                "La violencia física conlleva graves consecuencias para todas las partes involucradas. Esto incluye lesiones físicas, trauma emocional, deterioro de relaciones, posibles problemas legales, costos financieros, efectos negativos en los niños testigos, y una contribución a la perpetuación de ciclos de violencia en la sociedad.",
-                "La violencia física tiene ramificaciones significativas. Puede causar daños físicos directos, así como un dolor emocional profundo en las víctimas. Esto puede llevar a la ruptura de relaciones y, en algunos casos, a un ciclo continuo de abuso."
-            ]
-        },
-        {
-            "tag": "ViolenciaDeGeneroEnLinea",
-            "patterns": ["Que es la violencia de genero en linea","Violencia en linea","como se da la violencia en linea"],
-            "responses": [
-                "La violencia de género en línea se refiere al uso de medios digitales para acosar, intimidar o difamar a personas debido a su género",
-                "La violencia de género en línea implica el uso de tecnología y plataformas en línea para llevar a cabo actos de acoso o discriminación basados en el género.",
-                "La violencia de género en línea consiste en el ciberacoso y la agresión en línea dirigidos específicamente hacia alguien debido a su género o identidad de género"    
-            ]
-        },
-        {
-            "tag": "CausasDeViolenciaDeGeneroEnLinea",
-            "patterns": ["Cuales son las causas de violencia de genero en linea","Causas de violencia en linea"],
-            "responses": [
-                "Una de las causas de la violencia de género en línea es la persistencia de actitudes sexistas y discriminatorias que se manifiestan a través de la impunidad que brinda el anonimato en internet.",
-                "una causas importante de la violencia de género en línea es la falta de conciencia sobre los límites y el respeto hacia el consentimiento en las interacciones en línea, lo que lleva a situaciones de acoso y abuso en línea.",
-                "La falta de educación y sensibilización sobre la violencia de género en línea contribuye a este problema, ya que muchas personas no comprenden completamente cómo sus palabras y acciones en internet pueden dañar a otras personas y perpetuar estereotipos de género perjudiciales."
-            ]
-        },
-        {
-            "tag": "ConsecuenciasDeViolenciaDeGeneroEnLinea",
-            "patterns": ["Cuales son las causas de violencia de genero en linea","Causas de violencia en linea"],
-            "responses": [
-                "Las consecuencias de la violencia de género en línea incluyen daño emocional, aislamiento social, daño a la reputación, limitaciones en la vida cotidiana, censura, riesgo de violencia física, costos legales y un impacto negativo en la sociedad en su conjunto, ya que perpetúa estereotipos de género perjudiciales y socava la igualdad de género.",
-                "Una de las consecuencias de la violencia de género en línea es el debilitamiento de la participación igualitaria y segura de las personas en el entorno digital, lo que socava la libertad de expresión y contribuye a la perpetuación de la desigualdad de género tanto en línea como en la sociedad en general.",
-                "Una de las consecuencia  de la violencia de género en línea es el impacto negativo en la salud mental de las víctimas, que puede llevar a la ansiedad, la depresión y otros problemas psicológicos. Esto puede tener efectos duraderos en la salud y el bienestar de las personas afectadas."
-            ]
-        },
-        {
-            "tag": "ViolenciaInstitucional",
-            "patterns": ["Que es la violencia institucional"," Violencia institucional","Como se da la violencia institucional"],
-            "responses": [
-                "La violencia institucional es la perpetrada o tolerada por instituciones con poder y autoridad, que causa daño o discrimina de manera estructural.",
-                "La violencia institucional involucra políticas, prácticas o actitudes de instituciones que perpetúan la injusticia o el abuso de poder.",
-                "La violencia institucional se refiere a la acción u omisión de instituciones que sistemáticamente causan daño o discriminación."
-           ]
-        },
-        {
-            "tag": "CausasDeViolenciaInstitucional",
-            "patterns": ["Cuales son las causas de violencia institucional","Causas de violencia institucional"],
-            "responses": [
-                "la violencia institucional puede tener múltiples causas, pero se relaciona principalmente con un abuso de poder por parte de instituciones gubernamentales o de autoridad.",
-                "la violencia institucional surge debido a la falta de rendición de cuentas, impunidad, discriminación y políticas institucionales que permiten el abuso de poder por parte de las autoridades.",
-                "La violencia institucional se produce debido a abusos de poder, impunidad, discriminación y políticas que permiten la violencia por parte de instituciones gubernamentales."
-            ]
-        },
-        {
-            "tag": "ConsecueciasDeViolenciaInstitucional",
-            "patterns": ["Cuales son las consecuencias de violencia institucional","Consecuencias de violencia institucional"],
-            "responses": [
-                "las consecuencias de la violencia institucional incluyen daño físico y psicológico a las víctimas, desconfianza en las instituciones, injusticia, divisiones sociales, protestas y costos económicos. Esto debilita la seguridad, la cohesión social y la confianza en el gobierno.",
-                "Una de las consecuencias de La violencia institucional generalmente conduce a la erosión de la confianza en las instituciones gubernamentales, violaciones de derechos humanos y un impacto negativo en la estabilidad y el progreso social y económico de una sociedad.",
-                "La violencia institucional suele dar lugar a la pérdida de confianza en las instituciones gubernamentales, la vulneración de derechos fundamentales y un impacto negativo en la estabilidad social y el bienestar de la población afectada."
-           ]
-        }
 
         
         

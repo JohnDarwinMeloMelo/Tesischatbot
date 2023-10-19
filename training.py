@@ -46,14 +46,27 @@ def eliminar_palabras_de_parada(texto, idioma='spanish'):
     palabras = nltk.word_tokenize(texto)
     stop_words = set(stopwords.words(idioma))
     palabras_filtradas = [palabra for palabra in palabras if palabra.lower() not in stop_words]
+    #palabras_filtradas = [plural_a_singular(palabra) if palabra.lower() not in stop_words else palabra for palabra in palabras]
     texto_procesado = ' '.join(palabras_filtradas)
     return texto_procesado
 
-
+def plural_a_singular(palabra):
+            if palabra.endswith("es"):
+                palabra_singular = palabra[:-2]  # Elimina la "s" final
+                return palabra_singular
+            elif palabra.endswith("s"):
+                palabra_singular = palabra[:-1]  # Elimina "es" final
+                return palabra_singular
+            else:
+                return palabra
+        
+        
 #Clasifica los patrones y las categorías
+cont=0
 for intent in intents['intents']:
     for pattern in intent['patterns']:
-        #pattern = eliminar_palabras_de_parada(pattern, idioma='spanish')
+        cont=cont+1
+        pattern = eliminar_palabras_de_parada(pattern, idioma='spanish')
         texto_sin_tildes = quitar_tildes(pattern)
         pattern = texto_sin_tildes.lower()
         print("patter: "+pattern)
@@ -127,5 +140,6 @@ sgd = SGD(learning_rate=0.001, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer = sgd, metrics = ['accuracy'])
 
 #Entrenamos el modelo y lo guardamos
+print("contador : ",cont)
 train_process = model.fit(np.array(train_x), np.array(train_y), epochs=1000, batch_size=5, verbose=1)
 model.save("chatbot_model.h5", train_process)

@@ -128,10 +128,22 @@ def webhook_whatsapp():
             palabras = nltk.word_tokenize(texto)
             stop_words = set(stopwords.words(idioma))
             palabras_filtradas = [palabra for palabra in palabras if palabra.lower() not in stop_words]
+            #palabras_filtradas = [plural_a_singular(palabra) if palabra.lower() not in stop_words else palabra for palabra in palabras]
             texto_procesado = ' '.join(palabras_filtradas)
             return texto_procesado
         
-        #mensaje = pattern = eliminar_palabras_de_parada(mensaje, idioma='spanish')
+        def plural_a_singular(palabra):
+            if palabra.endswith("es"):
+                palabra_singular = palabra[:-2]  # Elimina la "s" final
+                return palabra_singular
+            elif palabra.endswith("s"):
+                palabra_singular = palabra[:-1]  # Elimina "es" final
+                return palabra_singular
+            else:
+                return palabra
+        
+        
+        mensaje = eliminar_palabras_de_parada(mensaje, idioma='spanish')
         mensaje = unidecode.unidecode(mensaje.lower())
         print("mensaje 1: "+mensaje)
         

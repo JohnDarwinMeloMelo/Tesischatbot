@@ -15,6 +15,7 @@ from nltk.corpus import stopwords
 from keras.models import load_model
 import os
 from langdetect import detect 
+from pattern.es import singularize
 nltk.download('stopwords')
 app = Flask(__name__)
 
@@ -71,13 +72,19 @@ def webhook_whatsapp():
             mensaje2= " ".join(sentence_words)
     
             print("mensaje 2: "+ mensaje2)
-            return sentence_words
+            return ' '.join(sentence_words)
 
         #Convertimos la información a unos y ceros según si están presentes en los patrones
         def bag_of_words(sentence):
+            sentence_words = []
+            sentence_word = clean_up_sentence(sentence)
+            sentence_word = eliminar_palabras_de_parada(sentence_word, idioma='spanish')
             
-            sentence_words = clean_up_sentence(sentence)
-            
+            sentence_word = convertir_a_singular(sentence_word)
+            sentence_word = unidecode.unidecode(sentence_word.lower())
+            print("mensaje 1: "+sentence_word)
+            word_list = nltk.word_tokenize(sentence_word)
+            sentence_words.extend(word_list)
             bag = [0]*len(words)
             for w in sentence_words:
                 for i, word in enumerate(words):
@@ -142,10 +149,19 @@ def webhook_whatsapp():
             else:
                 return palabra
         
+
+        def convertir_a_singular(oracion):
+            palabras = oracion.split()
+            oracion_singular = [singularize(palabra) for palabra in palabras]
+            return ' '.join(oracion_singular)
+
+        # Ejemplo de uso:
         
-        mensaje = eliminar_palabras_de_parada(mensaje, idioma='spanish')
-        mensaje = unidecode.unidecode(mensaje.lower())
-        print("mensaje 1: "+mensaje)
+        
+       
+
+        
+        
         
         ints = predict_class(mensaje)
    

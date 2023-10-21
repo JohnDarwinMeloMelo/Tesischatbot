@@ -2,16 +2,43 @@
     "intents": [
         {
             "tag": "Saludo",
-            "patterns": ["Hola", "que tal", "Buenos días", "buenas tardes", "buenas noches"],
+            "patterns": ["Hola", "que tal","Que haces","como estas"],
             "responses": [
-                "¡Hola! Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en genro de género. ¿En qué puedo ayudarte hoy?",
-                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia de género. ¿Cómo puedo asistirte?",
-                "Buenos días. Soy un chatbot especializado en temas de violencia de género. ¿En qué puedo orientarte?"
+                "¡Hola! Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en género. ¿En qué puedo ayudarte hoy?",
+                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia de género. ¿Cómo puedo asistirte?"
+            ]
+        },
+
+        {
+            "tag": "buenosDias",
+            "patterns": ["Buenos días"],
+            "responses": [
+                "Buenos dias, Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en género. ¿En qué puedo ayudarte hoy?",
+                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia basada en género. ¿Cómo puedo asistirte?",
+                "Buenos días. Soy un chatbot especializado en temas de violencia basada en género. ¿En qué puedo orientarte?"
+            ]
+        },
+        {
+            "tag": "buenasTardes",
+            "patterns": ["Buenos tardes"],
+            "responses": [
+                "Buenas tardes, Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en género. ¿En qué puedo ayudarte hoy?",
+                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia basada en género. ¿Cómo puedo asistirte?",
+                "Buenas tardes. Soy un chatbot especializado en temas de violencia basada en género. ¿En qué puedo orientarte?"
+            ]
+        },
+        {
+            "tag": "buenasNoches",
+            "patterns": ["Buenas noches"],
+            "responses": [
+                "Buenos Noches, Soy un chatbot dedicado a proporcionarte información y apoyo relacionado con la violencia basada en género. ¿En qué puedo ayudarte hoy?",
+                "¡Saludos! Estoy aquí para ayudarte con información sobre la violencia basada en género. ¿Cómo puedo asistirte?",
+                "Buenos Noches. Soy un chatbot especializado en temas de violencia basada en género. ¿En qué puedo orientarte?"
             ]
         },
         {
             "tag": "Despedida",
-            "patterns": ["Gracias", "Adiós", "Hasta luego",	"chao"],
+            "patterns": ["Adiós", "Hasta luego",	"chao"],
             "responses": [
                 "De nada, si tienes más preguntas en el futuro, no dudes en preguntar. ¡Cuídate!",
                 "Hasta luego. Siempre estoy aquí si necesitas más información o apoyo.",
@@ -20,7 +47,7 @@
         },
         {
             "tag": "Agradecimiento",
-            "patterns": ["Gracias por la ayuda", "Te agradezco", "Estoy agradecido"],
+            "patterns": ["Gracias por la ayuda", "Te agradezco", "Estoy agradecido","Gracias"],
             "responses": [
                 "No hay de qué, siempre estoy aquí para ayudar. Si tienes más preguntas, no dudes en preguntar.",
                 "De nada, es un placer ayudarte. No dudes en contactarme si necesitas más información.",
@@ -31,8 +58,8 @@
             "tag": "No_entendido",
             "patterns": ["No entiendo", "No sé qué hacer", "Confundido"],
             "responses": [
-                "Entiendo que puedas sentirte confundido. Estoy aquí para proporcionarte información y orientación. ¿En qué puedo aclararte las dudas?",
-                "No te preocupes si no entiendes algo. Estoy aquí para ayudarte a obtener la información que necesitas.",
+                "Entiendo que puedas sentirte confundido. Estoy aquí para proporcionarte información relacionado con violencia basada en género. ¿En qué puedo aclararte las dudas?",
+                "No te preocupes si no entiendes algo. Estoy aquí para ayudarte a obtener la información relacionado con violencia basada en género que necesitas.",
                 "Si te sientes confundido, no dudes en preguntar más. Estoy aquí para aclarar tus dudas."
             ]
         },
@@ -40,15 +67,15 @@
             "tag": "Informativo",
             "patterns": ["Cuéntame más", "Más información", "Explícame"],
             "responses": [
-                "Claro, puedo proporcionarte información sobre la violencia de género, sus tipos y cómo buscar ayuda. ¿En qué tema específico estás interesado?",
-                "Estoy aquí para proporcionarte información detallada sobre la violencia de género. ¿Sobre qué aspecto te gustaría saber más?",
-                "¡Claro! Si deseas más información sobre la violencia de género, no dudes en preguntar. Estoy aquí para ayudarte."
+                "Claro, puedo proporcionarte información sobre la violencia basada en género, sus tipos y cómo buscar ayuda. ¿En qué tema específico estás interesado?",
+                "Estoy aquí para proporcionarte información detallada sobre la violencia basada en género. ¿Sobre qué aspecto te gustaría saber más?",
+                "¡Claro! Si deseas más información sobre la violencia basada en género, no dudes en preguntar. Estoy aquí para ayudarte."
             ]
         },
         
         {
             "tag": "QueEsSexo",
-            "patterns": ["Qué es sexo ", "Cuál es tu definición de sexo", "Podrías explicarme qué significa sexo","Cuál es tu definición de sexo","sexo"],
+            "patterns": ["Qué es sexo","Explicar sexo","Explicación de sexo","Descripción de sexo","Describir sexo","Significado de sexo","Concepto de sexo","Expresión de sexo","sexo"],
             "responses": [
                 "El sexo es la combinación de características biológicas que distingue a los seres humanos como masculinos o femeninos.",
                 "El sexo se refiere a las diferencias físicas y fisiológicas entre hombres y mujeres, como los genitales y las características sexuales secundarias.",
@@ -58,7 +85,7 @@
         
         {
             "tag": "DiferenciaEntreSexoYGenero",
-            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo y género","Es lo mismo sexo y género","sexo y género"],
+            "patterns": ["diferencia entre sexo y género", "distinción entre sexo y género","distingue sexo y género","Es lo mismo sexo y género","sexo y género"],
             "responses": [
                 "Sexo se refiere a las características biológicas, como genitales y cromosomas, que clasifican a una persona como hombre o mujer. Género se relaciona con las identidades, roles y expresiones sociales y personales asociadas a la feminidad y la masculinidad.",
                 "Sexo es biológico y se asigna al nacer, mientras que género es una construcción social y personal que puede variar de una cultura a otra.",
@@ -68,7 +95,7 @@
         
         {
             "tag": "TiposDeSexo",
-            "patterns": ["tipos de sexo","clase de sexo"],
+            "patterns": ["tipos de sexo","clase de sexo","Categorias de sexo","Cualidades de sexo"],
             "responses": [
                 "Es la clasificación de los seres humanos en machos y hembras basada en características físicas y genéticas"
             ]
@@ -76,7 +103,7 @@
         
         {
             "tag": "QueEsElGenero",
-            "patterns": ["Qué es género", "Cuál es tu definición de género", "Podrías explicarme qué significa género","Cuál es tu definición de género","género"],
+            "patterns": ["Qué es género","Explicación de género","Descripción de género","Describir género","Significado de género","Concepto de género","Expresión de género","género"],
             "responses": [
                 "El género es la identidad personal de una persona relacionada con su sentido de ser hombre, mujer u otra identidad.",
                 "El género se refiere a cómo una persona se identifica en términos de masculino, femenino o cualquier otra identidad de género.",
@@ -85,7 +112,7 @@
         },
         {
             "tag": "QueEsElGeneroBinario",
-            "patterns": ["Qué es género", "Cuál es tu definición de género", "Podrías explicarme qué significa género binario","Cuál es tu definición de género binario","género binario"],
+            "patterns": ["Qué es género binario","Explicar género binario","Explicación de género binario","Descripción de género binario","Describir género binario","Significado de género binario","Concepto de género binario","Expresión de género binario","género binario"],
             "responses": [
                 "Género binario: Masculino y femenino.",
                 "Tradicionalmente, se ha considerado que son las únicas dos identidades de género que son femenino y msaculino."
@@ -95,7 +122,7 @@
         
         {
             "tag": "DiferenciaEntreGeneroYIdentidadDeGenero",
-            "patterns": ["Cuál es la diferencia entre sexo y género", "distinción entre sexo y género","En qué se distingue sexo de género","Es lo mismo sexo y género","género y identidad de género"],
+            "patterns": ["diferencia entre sexo y género", "distinción entre sexo y género","distingue sexo de género","Es lo mismo sexo y género","género y identidad de género"],
             "responses": [
                 "Género es las expectativas sociales de ser hombre o mujer y identidad de Género es cómo una persona se identifica.",
                 "Diferencia de género se refiere a las normas y roles sociales asociados a ser masculino o femenino, mientras que la identidad de género es la forma en que una persona se siente y se identifica en términos de género."
@@ -104,7 +131,7 @@
         
         {
             "tag": "QueEsEstereotiposDeGenero",
-            "patterns": ["Qué es estereotipos de género", "Cuál es tu definición de estereotipos de género", "Podrías explicarme qué significa estereotipos de género género","Cuál es tu definición de estereotipos de Género","estereotipos de Género"],
+            "patterns": ["Qué es estereotipos de género","Explicación de estereotipos de género","Descripción de estereotipos de género","Describir estereotipos de género","Significado de estereotipos de género","Concepto de estereotipos de género","Expresión de estereotipos de género","estereotipos de Género"],
             "responses": [
                 "Los estereotipos de género son imaginarios o expectativas de comportamiento que parten de la comprensión social de las diferencias físicas, biológicas o sexuales entre hombres y mujeres",
                 "Los estereotipos de género son creencias preconcebidas sobre cómo se espera que se comporten, piensen y sientan las personas en función de su género."
@@ -113,14 +140,14 @@
         
         {
             "tag": "TiposDeGenero",
-            "patterns": ["tipos de género","Tipos de identidad de género","clases de genero","clases tipo de genero de género","clases de genero" ],
+            "patterns": ["tipos de género","Tipos de identidad de género","clases de genero","clases tipo de genero de género","clases de género","Categorias de género","Cualidades de género"],
             "responses": [
                 "Se refieren a las diferentes identidades de género que van más allá de la dicotomía tradicional hombre/mujer. Algunos ejemplos incluyen: hombre, mujer, transgénero, género no binario, género fluido, genderqueer, agénero, bigénero, tercer género y dos espíritus."
             ]
         },
         {
             "tag": "QuéEsViolenciaDeGénero",
-            "patterns": ["qué es la violencia de género", "Cómo se define la violencia de género","Explícame las formas en que se manifiesta la violencia de género","violencia de género","Que significa violencia de género" ],
+            "patterns": ["qué es la violencia de género","Explicar violencia de género","Explicación de violencia de género","Descripción de violencia de género","Describir violencia de género","Significado de violencia de género","Concepto de violencia de género","Expresión de violencia de género","violencia de género" ],
             "responses": [
                 "La violencia de género se refiere a cualquier acto o conducta que causa daño físico, sexual o psicológico a una persona debido a su género.",
                 "La Violencia de Género es cualquier maltrato específico hacia alguien debido a su género, usualmente mujeres, involucrando violencia física, sexual o psicológica para ejercer poder y control.",
@@ -129,7 +156,7 @@
         },
         {
             "tag": "QuéEsViolenciaBasadaEnGénero",
-            "patterns": ["qué es la violencia basada en género", "Cómo se define la violencia basada en género","Explícame las formas en que se manifiesta la violencia basada en género","violencia basada en género","Que significa violencia basada en género","qué es la vbg", "Cómo se define la vbg","Explícame las formas en que se manifiesta la vbg","vbg","Que significa vbg" ],
+            "patterns": ["qué es la violencia basada en género","Explicación de violencia basada en género","Descripción de violencia basada en género","Describir violencia basada en género","Significado de violencia basada en género","Concepto de violencia basada en género","Expresión de violencia basada en género","violencia basada en género","Explicación de VBG","Descripción de VBG","Describir VBG","Significado de VBG","Concepto de VBG","Expresión de VBG","VBG" ],
             "responses": [
                 "Violencia basada en género es cualquier forma de violencia que ocurre debido a las diferencias de género y las normas sociales que perpetúan la desigualdad entre hombres y mujeres.",
                 "Violencia basada en género es la violencia que se comete contra alguien debido a su género, afectando a personas de todas las identidades de género, pero que afecta principalmente a mujeres y niñas debido a las estructuras patriarcales.",
@@ -138,7 +165,7 @@
         },
         {
             "tag": "DiferenciaViolenciaBasadaEnGéneroYViolenciaDeGenero",
-            "patterns": ["Cuál es la diferencia entre violencia basada en género y violencia de género", "distinción entre violencia basada en género y violencia de género","En qué se distingue violencia basada en género y violencia de género","Es lo mismo violencia basada en género y violencia de género","violencia basada en género y violencia de género","Es igual violencia basada en género y violencia de género","Cuál es la diferencia entre vbg y violencia de género", "distinción entre vbg y violencia de género","En qué se distingue vbg y violencia de género","Es lo mismo VBG y violencia de género","VBG y violencia de género","Es igua VBG y violencia de género"],
+            "patterns": ["diferencia entre violencia basada en género y violencia de género", "distinción entre violencia basada en género y violencia de género","En qué se distingue violencia basada en género y violencia de género","Es lo mismo violencia basada en género y violencia de género","violencia basada en género y violencia de género","Es igual violencia basada en género y violencia de género","Cuál es la diferencia entre vbg y violencia de género", "distinción entre vbg y violencia de género","En qué se distingue vbg y violencia de género","Es lo mismo VBG y violencia de género","VBG y violencia de género","Es igua VBG y violencia de género"],
             "responses": [
                 "Violencia de género se enfoca en la violencia que afecta a una persona debido a su género, generalmente mujeres víctimas de violencia por parte de hombres. Violencia basada en género (VBG) es un término más amplio que incluye cualquier violencia que se perpetra debido a las diferencias de género.",
                 "La violencia de género se dirige específicamente a las personas debido a su género, mientras que la violencia basada en género incluye la violencia que puede afectar a alguien debido a su identidad de género, orientación sexual u otras características relacionadas con el género.",
@@ -150,7 +177,7 @@
 
         {
             "tag": "QueEsLaOrientacionSexual",
-            "patterns": ["Qué es la orientación sexual", "Significado de orientación sexual","Explícame qué significa la orientación sexual", "orientacion sexual"],
+            "patterns": ["Qué es la orientación sexual","Explicación de orientación sexual","Descripción de orientación sexual","Describir orientación sexual","Significado de orientación sexual","Concepto de orientación sexual","Expresión de orientación sexual","orientacion orientación sexual"],
             "responses": [
                 "La orientación sexual se refiere a quiénes sentimos atracción emocional y sexual. Puede ser heterosexual, homosexual, bisexual, o de otras formas.",
                 "La orientación sexual es a quiénes nos sentimos atraídos: del mismo sexo, del sexo opuesto, o de ambos sexos. Es una parte fundamental de nuestra identidad.",
@@ -159,7 +186,7 @@
         },
         {
             "tag": "CuantasOrientacionesSexuales",
-            "patterns": ["Cuántas orientaciones sexuales existen", "cuantas orientaciones sexuales","tipos orientaciones sexuales", "clases de orientaciones sexuales"],
+            "patterns": ["Cuántas orientaciones sexuales existen", "cuantas orientaciones sexuales","tipos orientaciones sexuales", "clases de orientaciones sexuales","Categorias de orientaciones sexuales","Cualidades de orientaciones sexuales" ],
             "responses": [
                 "Existen numerosas orientaciones sexuales, incluyendo heterosexualidad, homosexualidad, bisexualidad, pansexualidad y asexualidad, entre otras.",
                 "No hay una lista fija de orientaciones sexuales, ya que las experiencias son diversas. Sin embargo, algunas comunes son heterosexual, homosexual y bisexual, pero existen muchas más, como pansexual, asexual y demisexual.",
@@ -169,7 +196,7 @@
         
         {
             "tag": "heterosexualidad",
-            "patterns": ["Qué es la heterosexualidad", "Significado de heterosexualidad","Explícame qué significa la heterosexualidad", "heterosexualidad","heterosexual"],
+            "patterns": ["Qué es la heterosexualidad","Explicar heterosexualidad","Explicación de heterosexualidad","Descripción de heterosexualidad","Describir heterosexualidad","Significado de heterosexualidad","Concepto de heterosexualidad","Expresión de heterosexualidad","heterosexualidad","heterosexual"],
             "responses": [
                 "Heterosexualidad es la orientación sexual en la que una persona siente atracción romántica y sexual hacia personas del sexo opuesto.",
                 "Heterosexualidad es cuando una persona se siente atraída emocional y sexualmente por individuos del género opuesto al suyo.",
@@ -178,7 +205,7 @@
         },
         {
             "tag": "Homosexualidad",
-            "patterns": ["Qué es la Homosexualidad","Significado de Homosexualidad","Explícame qué significa la Homosexualidad", "Homosexualidad","homosexual"],
+            "patterns": ["Qué es la Homosexualidad","Explicar Homosexualidad","Explicación de Homosexualidad","Descripción de Homosexualidad","Describir Homosexualidad","Significado de Homosexualidad","Concepto de Homosexualidad","Expresión de Homosexualidad","Homosexualidad","homosexual"],
             "responses": [
                 "Homosexualidad es la orientación sexual en la que una persona siente atracción romántica y sexual hacia personas del mismo sexo.",
                 "Homosexualidad es cuando alguien se siente atraído emocional y sexualmente por individuos del mismo género.",
@@ -187,7 +214,7 @@
         },
         {
             "tag": "Bisexualidad",
-            "patterns": ["Qué es la bisexualidad ","Significado de bisexualidad","Explícame qué significa la bisexualidad", "bisexualidad","bisexual"],
+            "patterns": ["Qué es la bisexualidad ","Explicar bisexualidad","Explicación de bisexualidad","Descripción de bisexualidad","Describir bisexualidad","Significado de bisexualidad","Concepto de bisexualidad","Expresión de bisexualidad","bisexualidad","bisexual"],
             "responses": [
                 "La bisexualidad es una orientación sexual en la que una persona se siente atraída emocional, romántica y/o sexualmente hacia individuos de más de un género, lo que puede incluir géneros masculinos, femeninos y no binarios.",
                 "La bisexualidad se refiere a la capacidad de una persona para experimentar atracción tanto hacia personas del mismo género como del género opuesto. Las personas bisexuales tienen la capacidad de establecer relaciones románticas y sexuales con individuos de diferentes identidades de género.",
@@ -196,7 +223,7 @@
         },
         {
             "tag": "Pansexualidad",
-            "patterns": ["Qué es la pansexualidad","Significado de pansexualidad","Explícame qué significa pansexualidad", "pansexualidad","pansexual"],
+            "patterns": ["Qué es la pansexualidad","Explicar pansexualidad","Explicación de pansexualidad","Descripción de pansexualidad","Describir pansexualidad","Significado de pansexualidad","Concepto de pansexualidad","Expresión de pansexualidad","pansexualidad","pansexual"],
             "responses": [
                 "La pansexualidad es la atracción hacia personas sin importar su género, incluyendo hombres, mujeres, y personas con identidades de género no binarias",
                 "La pansexualidad implica sentir atracción romántica, emocional y sexual hacia individuos independientemente de su identidad de género.",
@@ -206,7 +233,7 @@
        
         {
             "tag": "Asexualidad",
-            "patterns": ["Qué es asexualidad","Significado de asexualidad","Explícame qué significa la asexualidad", "asexualidad","asexual"],
+            "patterns": ["Qué es asexualidad","Explicar asexualidad","Explicación de asexualidad","Descripción de asexualidad","Describir asexualidad","Significado de asexualidad","Concepto de asexualidad","Expresión de asexualidad","asexualidad","asexual"],
             "responses": [
                 "La asexualidad es una orientación sexual en la cual una persona no experimenta atracción sexual hacia otras personas.",
                 "La asexualidad es la falta de interés o deseo sexual hacia cualquier género o individuo. Las personas asexuales pueden experimentar conexiones emocionales y románticas, pero no sienten necesidad de actividad sexual.",
@@ -215,7 +242,7 @@
         },
         {
             "tag": "Demisexualidad",
-            "patterns": ["Qué es demisexualidad","Significado de demisexualidad","Explícame qué significa la demisexualidad", "demisexualidad","demisexual"],
+            "patterns": ["Qué es demisexualidad","Explicar demisexualidad","Explicación de demisexualidad","Descripción de demisexualidad","Describir demisexualidad","Significado de demisexualidad","Concepto de demisexualidad","Expresión de demisexualidad","demisexualidad","demisexual"],
             "responses": [
                 "La demisexualidad es la atracción sexual que se desarrolla solo después de establecer una conexión emocional fuerte con alguien.",
                 "La demisexualidad implica sentir atracción sexual solo cuando existe un lazo emocional profundo con la persona.",
@@ -224,7 +251,7 @@
         },
         {
             "tag": "Graysexualidad",
-            "patterns": ["Qué es la graysexualidad","Significado de graysexualidad","Explícame qué significa graysexualidad", "graysexualidad","graysexual"],
+            "patterns": ["Qué es la graysexualidad","Explicar graysexualidad","Explicación de graysexualidad","Descripción de graysexualidad","Describir graysexualidad","Significado de graysexualidad","Concepto de graysexualidad","Expresión de graysexualidad","graysexualidad","graysexual"],
             "responses": [
                 "La graysexualidad es una orientación sexual en la que una persona experimenta atracción sexual en raras ocasiones o en circunstancias específicas.",
                 "La graysexualidad se refiere a alguien que experimenta atracción sexual de forma ocasional, fluctuante o en intensidad limitada.",
@@ -233,7 +260,7 @@
         },
         {
             "tag": "OrientacionSexualFluctuante",
-            "patterns": ["Qué es la orientación sexual fluctuante","orientación sexual fluctuante"],
+            "patterns": ["Qué es la orientación sexual fluctuante","Explicar orientación sexual fluctuante","Explicación de orientación sexual fluctuante","Descripción de orientación sexual fluctuante","Describir orientación sexual fluctuante","Significado de orientación sexual fluctuante","Concepto de orientación sexual fluctuante","Expresión de orientación sexual fluctuante","orientación sexual fluctuante"],
             "responses": [
                 "La orientación sexual fluctuante se refiere a la capacidad de una persona para experimentar cambios en su atracción sexual a lo largo del tiempo.",
                 "Es cuando una persona experimenta variaciones en su atracción hacia diferentes géneros en momentos diferentes, sin adherirse a una orientación fija.",
@@ -242,7 +269,7 @@
         },
         {
             "tag": "QueEsLaIdentidadDeGenero",
-            "patterns": ["Qué es la identidad de género", "Significado de identidad de género","Explícame qué significa la identidad de género", "identidad de género"],
+            "patterns": ["Qué es la identidad de género","Explicación de dentidad de género","Descripción de dentidad de género","Describir dentidad de género","Significado de dentidad de género","Concepto de dentidad de género","Expresión de dentidad de género","identidad de género"],
             "responses": [
                 "La identidad de género es la experiencia interna y profunda de ser hombre, mujer, o una identidad de género diferente. No siempre coincide con el sexo asignado al nacer.",
                 "Es la percepción interna de uno mismo como hombre, mujer, ambos, ninguno o un género diferente al asignado al nacer. La identidad de género no se limita a las categorías tradicionales de masculino o femenino.",
@@ -251,7 +278,7 @@
         },
         {
             "tag": "QueEsLgbtiq",
-            "patterns": ["Qué es lgbtiq", "Significado de lgbtiq","Explícame qué significa lgbtiq", "lgbtiq","lgbtiq+","lgb"],
+            "patterns": ["Qué es lgbtiq","Explicación de lgbtiq","Descripción de lgbtiq","Describir lgbtiq","Significado de lgbtiq","Concepto de lgbtiq","Expresión de lgbtiq","lgbtiq+","lgbtiq","lgbti","lgbt","lgb"],
             "responses": [
                 "LGBTIQ+ es un acrónimo que representa a lesbianas, gays, bisexuales, personas transgénero, intersexuales y el símbolo de más (+) denota inclusión para otras identidades sexuales y de género.",
                 "LGBTIQ+ es un término inclusivo que abarca diversas orientaciones sexuales y identidades de género, como lesbianas, gays, bisexuales, personas transgénero, intersexuales y otras identidades no conformes con las normas tradicionales.",
@@ -260,7 +287,7 @@
         },
         {
             "tag": "PersonasLesbianas",
-            "patterns": ["Qué es una persona lesbiana","Qué es lesbiana","Significado de lesbiana","Explícame qué significa lesbiana", "lesbiana"],
+            "patterns": ["Qué es una persona lesbiana","Explicación de lesbiana","Descripción de lesbiana","Describir lesbiana","Significado de lesbiana","Concepto de lesbiana","Expresión de lesbiana","lesbiana"],
             "responses": [
                 "Lesbianas son mujeres que tienen atracción romántica, emocional y/o sexual hacia otras mujeres.",
                 "El término lesbianas se refiere a mujeres homosexuales, es decir, mujeres que tienen relaciones románticas y sexuales con otras mujeres.",
@@ -269,7 +296,7 @@
         },
         {
             "tag": "PersonasGays",
-            "patterns": ["Qué es Persona gay ","Significado gay","Explícame qué significa gay", "gay"],
+            "patterns": ["Qué es Persona gay","Explicación de gay","Descripción de gay","Describir gay","Significado de gay","Concepto de gay","Expresión de gay", "gay"],
             "responses": [
                 "Gays son hombres que tienen atracción romántica, emocional y/o sexual hacia otros hombres.",
                 "El término gays se refiere a hombres homosexuales, es decir, hombres que tienen relaciones románticas y sexuales con otros hombres.",
@@ -277,8 +304,8 @@
             ]
         },
         {
-            "tag": "Trangenero",
-            "patterns": ["Qué es Persona Trangénero","Qué es Trangénero","Qué es Trangénero","Significado de Trangénero","Explícame qué significa Trangénero", "Trangénero"],
+            "tag": "Transgenero",
+            "patterns": ["Qué es Persona Transgénero","Explicación de Transgénero","Descripción de Transgénero","Describir Transgénero","Significado de Transgénero","Concepto de Transgénero","Expresión de Transgénero","Transgénero"],
             "responses": [
                 "Transgénero es un término que se refiere a personas cuya identidad de género difiere del sexo asignado al nacer.",
                 "Transgénero describe a individuos cuya identidad de género no coincide con el género que se les asignó al nacer, y pueden tomar medidas para vivir de acuerdo con su identidad de género.",
@@ -286,7 +313,7 @@
             ]
         },{
             "tag": "Intersexual",
-            "patterns": ["Qué es Intersexual","Significado Intersexual","Explícame qué significa Intersexual", "Intersexual"],
+            "patterns": ["Qué es Intersexual","Explicación de Intersexual","Descripción de Intersexual","Describir Intersexual","Significado de Intersexual","Concepto de Intersexual","Expresión de Intersexual", "Intersexual"],
             "responses": [
                 "Intersexual es un término que se refiere a personas que nacen con características sexuales que no se ajustan típicamente a las definiciones de sexo masculino o femenino.",
                 "Las personas intersexuales tienen variaciones biológicas en sus características sexuales, como genitales, cromosomas o hormonas, que no se alinean claramente con las definiciones tradicionales de masculino o femenino.",
@@ -296,7 +323,7 @@
 
         {
             "tag": "DiferenciaEntreOrientaciónSexualYIdentidadDeGenero",
-            "patterns": ["Qué diferencia hay entre orientación sexual y identidad de género", "Explícame cual es la diferencia entre orientación sexual y identidad de género","orientación sexual y identidad de género"],
+            "patterns": ["diferencia entre orientación sexual y identidad de género", "distinción entre orientación sexual y identidad de género","es lo mismo orientación sexual y identidad de género","orientación sexual y identidad de género"],
             "responses": [
                 "La orientación sexual se trata de a quiénes sentimos atracción, como hombres, mujeres o ambos. La identidad de género es quiénes creemos ser en términos de género, como hombre, mujer o no binario.",
                 "La orientación sexual se refiere a quiénes amamos y nos sentimos atraídos, mientras que la identidad de género es cómo nos identificamos internamente como hombre, mujer, u otra identidad de género.",
@@ -306,10 +333,10 @@
         ,
         {
             "tag": "RecursosAyuda",
-            "patterns": ["dónde encontrar ayuda por violencia de género", "recursos para víctimas de violencia de género"],
+            "patterns": ["encontrar ayuda", "encontrar recursos","que hago si soy victiva"],
             "responses": [
                 "Si eres víctima de violencia de género o conoces a alguien que lo es, puedes comunicarte con líneas de ayuda como [número de teléfono] para recibir apoyo confidencial.",
-                "Existen refugios y centros de atención para víctimas de violencia de género, donde ofrecen seguridad, asesoramiento y ayuda legal.",
+                
                 "Organizaciones como [nombres de organizaciones] también proporcionan recursos y orientación para ayudar a las víctimas a salir de situaciones abusivas.",
                 "Es importante buscar apoyo y hablar sobre la situación para poder tomar medidas para tu seguridad y bienestar."
             ]
@@ -336,16 +363,17 @@
         ,
         {
             "tag": "QueEsViolencia ",
-            "patterns": ["Qué es violencia", "Significado de violencia","Explícame qué significa violencia", "violencia"],
+            "patterns": ["Qué es violencia","Explicar violencia","Explicación de violencia","Descripción de violencia","Describir violencia","Significado de violencia","Concepto de violencia","Expresión de violencia","violencia"],
             "responses": [
-                "f"
+                "Violencia es dañar a otros física o emocionalmente",
+                "Violencia es el uso de la fuerza para lastimar a alguien."
                 
                 ]
         }
         ,
         {
             "tag": "TiposDeViolencia ",
-            "patterns": ["cuales son los tipos de violencia", "Cuántos tipos de violencia existen","tipos de Violencia","clases de violencia"],
+            "patterns": ["tipos de violencia","clases de Violencia","Categorias de violencia","Cualidades de violencia"],
             "responses": [
                 "Los tipos de violencia se refieren a las categorías o formas en que se manifiesta la agresión, el abuso o la coerción hacia otras personas o grupos. Estos tipos pueden incluir, entre otros, violencia física, psicológica, sexual y verbal.",
                 "Los tipos de violencia son las diversas formas en que se ejerce el poder o control de manera que daña a otra persona, ya sea mediante el uso de fuerza física, abuso emocional, explotación sexual, discriminación u opresión."
@@ -354,40 +382,46 @@
         ,
         {
             "tag": "ConsecuenciasDeViolencia",
-            "patterns": ["Que hago si soy victima de violencia", "a quien acudo si soy victima de violencia","que medidas tomo si soy victima de violencia","victima de violencia"],
+            "patterns": ["Consecuencias de violencia","efectos de violencia","secuela deviolencia","Derivación de violencia"],
             "responses": [
-            			"Sin respuesta"
+            	"La violencia puede causar problemas de salud mental, como ansiedad y depresión.",
+                "La violencia puede causar lesiones físicas y emocionales, perpetuar un ciclo de abuso generacional y llevar al aislamiento social y problemas legales."
+
                 ]
         }
         ,
         {
             "tag": "CausasDeViolencia",
-            "patterns": ["causa de violencia"],
+            "patterns": ["causa de violencia","Motivos de violencia","Razones de violencia","factores de violencia","casos de violencia"],
             "responses": [
-                "Sin respuesta"
+                "La disparidad en la distribución de recursos y oportunidades puede generar frustración y resentimiento, lo que a menudo desencadena actos violentos.",
+                "Las disputas no resueltas en las relaciones personales pueden llevar a la violencia, ya sea en el hogar o en la comunidad.",
+                "Creencias arraigadas, la presión de grupo y la influencia de la cultura pueden fomentar la violencia en algunas comunidades."
                 ]
         }
         ,
         {
             "tag": "QueHacerVictimaViolencia",
-            "patterns": ["Que hago si soy Víctimas de violencia", "a quien acudo si soy Víctimas de violencia","que medidas tomo si soy Víctimas de violencia","Víctima de violencia"],
+            "patterns": ["Víctimas de violencia","Hago si soy victima de violencia","afectado de violencia"],
             "responses": [
-                "sin respuesta"
+                "Busca seguridad: Prioriza tu seguridad y busca un lugar seguro de inmediato. Habla con alguien de confianza , comunica tu situación a un amigo, familiar o profesional de la salud. Llama a la policía si estás en peligro, contacta a las autoridades para denunciar la violencia y buscar protección."
                 ]
         }
         ,
         {
             "tag": "SeñalesVictimaViolencia",
-            "patterns": ["como saber si soy victima de violencia"],
+            "patterns": ["como saber si soy victima de violencia","señales de violencia"],
             "responses": [
-                "sin respuesta"
+                "Esto puede implicar golpes, empujones, bofetadas o cualquier forma de contacto físico no consensuado que cause daño o miedo a la víctima.",
+                "Las palabras pueden ser armas poderosas. Las amenazas, insultos, humillaciones y declaraciones intimidantes pueden ser señales de violencia verbal.",
+                "se manifiesta a través de la manipulación, el control excesivo, la degradación y la invalidación de los sentimientos de la víctima, lo que puede causar daño psicológico."
                 ]
         }
         ,
 
         {
             "tag": "QueEsExpresiónDeGenero",
-            "patterns": ["Qué es expresión de género", "Puedes explicar en detalle qué es la expresión de género","expresión de género"],
+            "patterns": ["Qué es expresión de género","Explicar expresión de género","Explicación de expresión de género","Descripción de expresión de género","Describir expresión de género","Significado de expresión de género","Concepto de expresión de género","Expresión de expresión de género","expresión de género"],
             "responses": [
                 "La expresión de género es cómo una persona muestra su identidad a través de comportamientos y apariencia, que pueden ser conformes o no conformes a las expectativas sociales de género.",
                 "Es la forma en que alguien se presenta al mundo, incluyendo la ropa, el peinado y el comportamiento, reflejando su identidad de género interna.",
@@ -423,7 +457,7 @@
         },
         {
             "tag": "QuéEsViolenciaFisica",
-            "patterns": ["Que es la violencia fisica","Violencia fisica","Explícame el concepto de violencia física"],
+            "patterns": ["Que es la violencia fisica","Explicar violencia fisica","Explicación de violencia fisica","Descripción de violencia fisica","Describir violencia fisica","Significado de violencia fisica","Concepto de violencia fisica","Expresión de violencia fisica","violencia fisica"],
             "responses": [
                 "La violencia física puede ser el resultado de una combinación de factores individuales, sociales y emocionales, incluidos conflictos personales, abuso de sustancias, problemas de salud mental, presión de grupo y desigualdad social.",
                 "La violencia física es la acción de herir o lastimar a alguien mediante el uso de la fuerza física, como golpes, patadas o puñetazos.",
@@ -478,11 +512,11 @@
             "tag": "desconocido",
             "patterns": ["*"],
             "responses": [
-                "Lo siento, no te entiendo.",
-                "Parece que estoy un poco confundido con eso.",
-                "No estoy seguro de entender. ¿Podrías proporcionar más detalles o hablar de algo diferente?",
-                "Mis conocimientos son limitados y puede que no pueda ayudarte con eso en particular.",
-                "Puedes hacer otra pregunta, no dudes en preguntar."
+                "Lo siento, no te entiendo. ¿Podrías preguntar algo relacionado con la violencia basada en género?",
+                "Parece que estoy un poco confundido con eso.¿Podrías preguntar algo relacionado con la violencia basada en género?",
+                "No estoy seguro de entender. ¿Podrías proporcionar más detalles o hablar algo relacionado con violencia basada en género ?",
+                "Mis conocimientos son limitados y puede que no pueda ayudarte con eso en particular."
+                
             ]
         }
 

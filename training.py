@@ -8,6 +8,7 @@ import unicodedata
 import nltk
 from nltk.stem import WordNetLemmatizer #Para pasar las palabras a su forma raíz
 from nltk.corpus import stopwords
+from pattern.es import singularize
 
 #Para crear la red neuronal
 from keras.models import Sequential
@@ -50,15 +51,10 @@ def eliminar_palabras_de_parada(texto, idioma='spanish'):
     texto_procesado = ' '.join(palabras_filtradas)
     return texto_procesado
 
-def plural_a_singular(palabra):
-            if palabra.endswith("es"):
-                palabra_singular = palabra[:-2]  # Elimina la "s" final
-                return palabra_singular
-            elif palabra.endswith("s"):
-                palabra_singular = palabra[:-1]  # Elimina "es" final
-                return palabra_singular
-            else:
-                return palabra
+def convertir_a_singular(oracion):
+    palabras = oracion.split()
+    oracion_singular = [singularize(palabra) for palabra in palabras]
+    return ' '.join(oracion_singular)
         
         
 #Clasifica los patrones y las categorías
@@ -67,6 +63,7 @@ for intent in intents['intents']:
     for pattern in intent['patterns']:
         cont=cont+1
         pattern = eliminar_palabras_de_parada(pattern, idioma='spanish')
+        pattern=convertir_a_singular(pattern)
         texto_sin_tildes = quitar_tildes(pattern)
         pattern = texto_sin_tildes.lower()
         print("patter: "+pattern)

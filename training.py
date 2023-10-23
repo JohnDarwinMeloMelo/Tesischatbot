@@ -73,6 +73,7 @@ for intent in intents['intents']:
         if intent["tag"] not in classes:
             classes.append(intent["tag"])
             print("tag: "+intent["tag"]+"\n\n")
+            cont=cont+1
             
 
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]

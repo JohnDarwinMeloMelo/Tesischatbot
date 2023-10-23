@@ -10,15 +10,17 @@ import numpy as np
 import torch
 import nltk
 import unidecode
+import mysql.connector
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from keras.models import load_model
 import os
 from langdetect import detect 
+
 from pattern.es import singularize
 nltk.download('stopwords')
 app = Flask(__name__)
-
+mensaje_global=""
 # Ruta para recibir las solicitudes de WhatsApp
 @app.route("/webhook/", methods=["POST", "GET"])
 def webhook_whatsapp():
@@ -34,7 +36,6 @@ def webhook_whatsapp():
     mensaje = None
     idWA = None
     timestamp = None
-
     if 'entry' in data and data['entry']:
         entry = data['entry'][0]
         if 'changes' in entry and entry['changes']:
@@ -75,14 +76,20 @@ def webhook_whatsapp():
             return ' '.join(sentence_words)
 
         #Convertimos la información a unos y ceros según si están presentes en los patrones
+        
         def bag_of_words(sentence):
+            global general_mensaje
             sentence_words = []
             sentence_word = clean_up_sentence(sentence)
             sentence_word = eliminar_palabras_de_parada(sentence_word, idioma='spanish')
             
             sentence_word = convertir_a_singular(sentence_word)
             sentence_word = unidecode.unidecode(sentence_word.lower())
-            print("mensaje 1: "+sentence_word)
+            
+            general_mensaje=sentence_word
+            #-------------------------------------------------VALIDACION _-__________
+            get_last_record_by_telefono()
+            print("mensaje 1: "+general_mensaje)
             word_list = nltk.word_tokenize(sentence_word)
             sentence_words.extend(word_list)
             bag = [0]*len(words)
@@ -126,8 +133,66 @@ def webhook_whatsapp():
             return result
 
         #-------------------------------------------
-        #Dectectar palabra mal escrita ----------------------------------------------------------------
+        #base de datos ----------------------------------------------------------------
+        def insert_data_to_database(idWA, mensaje, respuesta, timestamp, telefonoCliente):
+            
+            mydb = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database='chatvbg'
+            )
+            mycursor = mydb.cursor()
+            query = "SELECT count(id) AS cantidad FROM registro WHERE id_wa='" + idWA + "';"
+            mycursor.execute(query)
+            cantidad, = mycursor.fetchone()
+            cantidad = str(cantidad)
+            cantidad = int(cantidad)
+            if cantidad == 0:
+                sql = ("INSERT INTO registro" +
+                    "(mensaje_recibido, mensaje_enviado, id_wa, timestamp_wa, telefono_wa) VALUES " +
+                    "('" + mensaje + "','" + respuesta + "','" + idWA + "','" + timestamp + "','" + telefonoCliente + "');")
+                mycursor.execute(sql)
+                mydb.commit()
+        
+        def get_last_record_by_telefono():
+            try:
+                mydb = mysql.connector.connect(
+                    host="localhost",
+                    user="root",
+                    password="",
+                    database='chatvbg'
+                )
+                mycursor = mydb.cursor()
 
+                # Consulta SQL para obtener el último registro por número de teléfono
+                query = "SELECT * FROM registro WHERE telefono_wa = %s ORDER BY timestamp_wa DESC LIMIT 1;"
+                
+                # Reemplaza 'telefono_de_cliente' con el número de teléfono del cliente
+                telefono_de_cliente = telefonoCliente  # Reemplaza con el número de teléfono real
+
+                mycursor.execute(query, (telefono_de_cliente,))
+                result = mycursor.fetchone()
+                
+                if result:
+                    # El resultado contiene los campos del registro
+                    id, mensaje_recibido, mensaje_enviado, id_wa, timestamp_wa, telefono_wa = result
+
+                    print(f'ID: {id}')
+                    print(f'Mensaje Recibido: {mensaje_recibido}')
+                    print(f'Mensaje Enviado: {mensaje_enviado}')
+                    print(f'ID de WhatsApp: {id_wa}')
+                    print(f'Timestamp de WhatsApp: {timestamp_wa}')
+                    print(f'Teléfono del Cliente: {telefono_wa}')
+                else:
+                    print("No se encontraron registros para el número de teléfono especificado.")
+
+            except Exception as e:
+                print(f"Error al consultar la base de datos: {str(e)}")
+            finally:
+                mydb.close()
+        
+        
         
         
         #----------------------------------------INICIO DE MENSAJE 
@@ -158,24 +223,14 @@ def webhook_whatsapp():
         # Ejemplo de uso:
         
         
-       
-
-        
-        
         
         ints = predict_class(mensaje)
-   
-
-        
-        
-        
-       
-        
         respuesta = get_response(ints, intents)
         
         
-    
-
+        
+        global general_mensaje
+        insert_data_to_database(idWA, general_mensaje, respuesta, timestamp, telefonoCliente)
         with open("texto.txt", "w", encoding="utf-8") as f:
             f.write(respuesta)
 

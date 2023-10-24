@@ -1006,10 +1006,10 @@
         "tag": "EjemploLesionesPersonalesDolosas",
         "patterns": ["Ejemplos de Lesiones Personales Dolosas"],
         "responses": [
-            "Agresión simple: Un individuo golpea a otro durante una pelea en un bar. \n Lesiones graves o agravadas: Un ladrón ataca a una víctima con un cuchillo durante un robo, causando heridas graves. \n Intento de homicidio: Un individuo dispara un arma de fuego con la intención de matar a otra persona, pero la víctima sobrevive al ataque"
+            "Agresión simple: Un individuo golpea a otro durante una pelea en un bar. \n-Lesiones graves o agravadas: Un ladrón ataca a una víctima con un cuchillo durante un robo, causando heridas graves. \n-Intento de homicidio: Un individuo dispara un arma de fuego con la intención de matar a otra persona, pero la víctima sobrevive al ataque"
         ]
     },
-     {
+    {
         "tag": "PenaPersonalesDolosas",
         "patterns": ["Cuál es la pena por cometer lesiones personales dolosas","Qué consecuencia implica cometer lesiones personales dolosas","Cuáles son las sanciones por perpetrar lesiones personales dolosas","Cuál es el castigo por lesiones personales dolosas","Qué pena se asigna a quienes cometen lesiones personales dolosas","Qué repercusiones legales existen para quienes realizan lesiones personales dolosas"],
         "responses": [
@@ -1022,10 +1022,116 @@
         "tag": "VictimaLesionesPersonalesDolosas",
         "patterns": ["Cuáles son las acciones que debe tomar una víctima de lesiones personales dolosas","Qué debo hacer una víctima de lesiones personales dolosas","Cuál es el procedimiento adecuado para una víctima de lesiones personales dolosas","Qué medidas son necesarias para una persona afectada por lesiones personales dolosas","Qué acciones se recomiendan a alguien que ha sufrido lesiones personales dolosas","victima lesiones personales dolosas"],
         "responses": [
-            "Si eres víctima de lesiones personales solodolas, sigue estos pasos: \n Busca un lugar seguro. \n Llama a la policía en caso de peligro inmediato. \n Busca ayuda de organizaciones de apoyo a víctimas de violencia. \n Considera obtener una orden de restricción si es necesario. \n Habla con un terapeuta o consejero para recibir apoyo emocional. \n Denuncia los incidentes a las autoridades si te sientes segura para hacerlo. \n Conoce tus derechos legales y busca asesoramiento legal si es necesario. \n Comunica la situación a amigos y familiares de confianza. \n Planifica tu seguridad a largo plazo y considera un refugio o apoyo legal para una separación segura si es necesario. \n Mantén un registro de los incidentes de violencia para futuras referencias."
+            "Si eres víctima de lesiones personales solodolas, sigue estos pasos: \n-Busca un lugar seguro. \n-Llama a la policía en caso de peligro inmediato. \n-Busca ayuda de organizaciones de apoyo a víctimas de violencia. \n-Considera obtener una orden de restricción si es necesario. \n-Habla con un terapeuta o consejero para recibir apoyo emocional. \n-Denuncia los incidentes a las autoridades si te sientes segura para hacerlo. \n-Conoce tus derechos legales y busca asesoramiento legal si es necesario. \n-Comunica la situación a amigos y familiares de confianza. \n-Planifica tu seguridad a largo plazo y considera un refugio o apoyo legal para una separación segura si es necesario. \n-Mantén un registro de los incidentes de violencia para futuras referencias."
+        ]
+    },
+    {
+        "tag": "DerechosVíctimasEnCasosLesionesPersonalesDolosas",
+        "patterns": ["Cuáles son los derechos de las víctimas en casos de lesiones personales dolosas","Qué derechos tienen las víctimas en casos de lesiones personales dolosas","Cuáles son los beneficios de las víctimas en incidentes de lesiones personales dolosas"],
+        "responses": [
+            "Los derechos de las víctimas en casos de lesiones personales dolosas suelen incluir: \n-Acceso a atención médica. \n-Derecho a denunciar el incidente. \n-Privacidad y confidencialidad. \n-Búsqueda de compensación. \n-Asesoramiento legal. \n-Derecho a ser informados y escuchados. \n-Protección contra represalias. \n-Posibilidad de restitución (en algunos casos). \nLos derechos pueden variar según la jurisdicción. Consultar a un abogado es fundamental."
+        ]
+    },
+    {
+        "tag": "ConsecuenciasPersonalesDolosas",
+        "patterns": ["Cuáles son las consecuencias de las lesiones personales dolosas","Qué efectos tienen las lesiones personales dolosas","Cuáles son los resultados de las lesiones personales dolosas","Qué impacto tienen las lesiones personales dolosas","Qué se deriva de las lesiones personales dolosas","Qué implicaciones tienen las lesiones personales dolosas"],
+        "responses": [
+            "Las víctimas pueden experimentar desde cortes y moretones hasta lesiones graves, los gastos médicos y la pérdida de ingresos pueden ser abrumadores.",
+            "Las consecuencias psicológicas a menudo incluyen ansiedad, estrés postraumático y miedo persistente. Los gastos médicos y la pérdida de ingresos pueden ser abrumadores."
+        
+        ]
+    },
+    {
+        "tag": "QuéSonAtaquesConAgentesQuímico",
+        "patterns": ["Qué son los ataques con agentes químico","A qué se refieren los ataques usando productos químicos","Cómo se definen los ataques con agentes químicos","Cuál es la explicación de los ataques químicos","Qué significan los ataques mediante compuestos químicos","En qué consisten los ataques con sustancias químicas","Cómo se describen los ataques con agentes químicos","Ataques con Agentes Químicos"],
+        "responses": [
+            "Son acciones donde se utiliza productos químicos tóxicos con el propósito de herir o matar a individuos.",
+            "Son actos maliciosos que involucran la exposición de víctimas a sustancias químicas nocivas con la intención de causar daño físico.",
+            "Son ataques deliberados que emplean sustancias químicas peligrosas para perjudicar o asesinar a seres humanos."
+        ]
+    },
+    {
+        "tag": "EjemplosAtaquesConAgentesQuímico",
+        "patterns": ["Cuáles son algunos ejemplos de agentes químicos utilizados en ataques","Qué ejemplos hay de sustancias químicas empleadas en ataques","Dime ejemplos de agentes químicos usados en agresiones","ejemplos de sustancias químicas","Qué agentes químicos se usan en ataque"],
+        "responses": [
+            "Algunos ejemplos de agentes que pueden ser utilizados incluyen: \n-Sustancias tóxicas: Algunos agresores han utilizado venenos u otras sustancias tóxicas. \n-Drogas sedantes: En ocasiones, se emplean drogas para incapacitar a las víctimas. \n-Sustancias inflamables: En casos extremos, se ha registrado el uso de líquidos inflamables para causar daño físico a las víctimas."
+        ]
+    },
+    {
+        "tag": "QueFeminicidio",
+        "patterns": ["Qué es el feminicidio","Cuál es la definición de feminicidio","Puedes explicar qué significa el término feminicidio","Podrías definir feminicidio para mí","Podrías describir el concepto de feminicidio","Me podrías decir qué implica el feminicidio","En qué consiste el concepto de feminicidio","Cómo se define el feminicidio","Qué se entiende por feminicidio","Cuál es la explicación de feminicidio","Podrías aclarar el significado de feminicidio"],
+        "responses": [
+            "El feminicidio es el asesinato de mujeres por razones de género, que incluyen la misoginia, la discriminación y la violencia de género. Es un crimen grave que refleja una profunda desigualdad de género.",
+            "El feminicidio es el asesinato de mujeres debido a su género, reflejando desigualdad de género y violencia.",
+            "El feminicidio es el asesinato de mujeres por razones de género, implicando misoginia y discriminación."
+        ]
+    },
+    {
+        "tag": "CausasFeminicidio",
+        "patterns": ["Cuáles son las causas del feminicidio","Por qué ocurren los feminicidios","Cuáles son los motivos detrás del feminicidio","Qué factores contribuyen al feminicidio","Cuáles son los orígenes del feminicidio","Qué desencadena el feminicidio","Qué circunstancias llevan al feminicidio","Por qué se producen los asesinatos de mujeres","Cuáles son las razones detrás del feminicidio"],
+        "responses": [
+            "Las causas del feminicidio son variadas y pueden incluir la misoginia, el machismo, la violencia doméstica, la discriminación de género, la impunidad y la falta de protección efectiva para las víctimas.",
+            "Las causas del feminicidio son variadas e incluyen la misoginia, el machismo, la violencia doméstica, la discriminación de género, la impunidad y la falta de protección efectiva para las víctimas."
+        ]
+    },
+    {
+        "tag": "PrevenirFeminicidio",
+        "patterns": ["Cómo se puede prevenir el feminicidio","Cuáles son las medidas para evitar el feminicidio","Qué estrategias existen para impedir el feminicidio","Cómo se puede evitar que ocurra el feminicidio","Qué acciones contribuyen a la prevención del feminicidio","Cuáles son las formas de proteger a las mujeres del feminicidio","Qué se puede hacer para detener el feminicidio","Cuáles son las iniciativas para combatir el feminicidio"],
+        "responses": [
+            "La prevención del feminicidio implica abordar la discriminación de género en la sociedad, promover la igualdad de género, mejorar las leyes y políticas de protección a las mujeres, y proporcionar recursos y apoyo a las víctimas de violencia de género.",
+            "La prevención del feminicidio implica promover la educación y concienciación sobre la igualdad de género desde temprana edad, para combatir estereotipos dañinos.",
+            "Fomentar una sociedad en la que las mujeres se sientan seguras y respaldadas, a través de políticas gubernamentales, campañas de sensibilización y la participación activa de la comunidad, es fundamental para prevenir el feminicidio."
+        ]
+    },
+    {
+        "tag": "luagarFeminicidio",
+        "patterns": ["Dónde ocurre con mayor frecuencia el feminicidio.","En qué lugares se registra el feminicidio con mayor frecuencia","Dónde se reporta una mayor incidencia de feminicidio","En qué áreas geográficas es más común el feminicidio","En cuáles ubicaciones se manifiesta con más regularidad el feminicidio"],
+        "responses": [
+            "El feminicidio puede ocurrir en todo el mundo, pero es más común en lugares donde existen altos niveles de discriminación de género y violencia de género, así como en áreas con sistemas de justicia ineficaces."
+        ]
+    },
+    {
+        "tag": "RelacionFeminicidioyViolenciadegenero",
+        "patterns": ["Cuál es la relación entre el feminicidio y otros tipos de violencia de género","Cómo se vincula el feminicidio con otras formas de violencia de género","De qué manera se conecta el feminicidio con otros tipos de violencia de género","Cómo se interrelaciona el feminicidio con la violencia de género","feminicidio y vbg","Cuáles son las conexiones entre el feminicidio y otras formas de violencia"],
+        "responses": [
+            "El feminicidio está relacionado con la violencia de género en general, como la violencia doméstica, la agresión sexual y el acoso. Todos estos tipos de violencia están arraigados en la desigualdad de género y la discriminación."
+        ]
+    },
+    {
+        "tag": "leyesPrevenirFeminicidio",
+        "patterns": ["Cuál es el papel de las leyes y políticas en la prevención del feminicidio","Cómo influyen las leyes y políticas en la prevención del feminicidio","Cuál es la importancia de las leyes y políticas en la prevención de los feminicidios","Cómo las legislaciones y políticas contribuyen a evitar el feminicidio","De qué manera las normativas y políticas impactan en la prevención del feminicidio","En qué medida las leyes y políticas pueden ayudar a prevenir el feminicidio"],
+        "responses": [
+            "Las leyes y políticas efectivas son fundamentales para prevenir el feminicidio. Esto incluye leyes que castigan a los agresores, medidas de protección para las víctimas y programas de concienciación y educación."
+        ]
+    },
+    {
+        "tag": "ApoyaraVictimasFeminicidio",
+        "patterns": ["Qué se puede hacer para apoyar a las víctimas de feminicidio","Cómo se puede brindar apoyo a las víctimas de feminicidio","Cuáles son las acciones que ayudan a las víctimas de feminicidio","Qué medidas pueden tomarse para respaldar a las víctimas de feminicidio","Cuál es la manera de asistir a las víctimas de feminicidio","Qué recursos están disponibles para apoyar a las víctimas de feminicidio","Cómo puede la sociedad respaldar a las personas afectadas por feminicidio","Cuáles son las formas de ofrecer ayuda a las víctimas de feminicidio"],
+        "responses": [
+            "Apoyar a las víctimas de feminicidio implica brindarles apoyo emocional, acceso a servicios de asesoramiento, asistencia legal y ayuda para reconstruir sus vidas.",
+            "Brindar apoyo psicológico y emocional a las víctimas de feminicidio y a sus familias, conectándolas con profesionales de la salud mental y grupos de apoyo.",
+            "Promover la concienciación y la solidaridad en la sociedad, para reducir el estigma que rodea a las víctimas de feminicidio y garantizar que cuenten con redes de apoyo seguras y compasivas."
+        ]
+    },
+    {
+        "tag": "AvancesPrevenirFeminicidio",
+        "patterns": ["Qué avances se han logrado en la lucha contra el feminicidio","Cuáles son los progresos alcanzados en la erradicación del feminicidio","Qué mejoras se han logrado en la batalla contra el feminicidio","Cuáles son los logros en la prevención del feminicidio","Qué avances destacan en la reducción de los casos de feminicidio","Avances para prevenir el feminicidio"],
+        "responses": [
+            "A lo largo de los años, se han logrado avances en la concienciación y en la implementación de leyes y políticas destinadas a prevenir el feminicidio. Sin embargo, sigue siendo un problema grave en muchas partes del mundo y requiere un esfuerzo continuo para combatirlo.",
+            "A lo largo de los años, se han conseguido mejoras en la sensibilización y la ejecución de regulaciones y estrategias dirigidas a prevenir el feminicidio. A pesar de esto, sigue siendo una preocupación seria en diversas regiones del planeta, y es necesario persistir en los esfuerzos para hacerle frente"
+        ]
+    },
+    {
+        "tag": "impactoFeminicidio",
+        "patterns": ["Cuál es el impacto del feminicidio en la sociedad","Cómo afecta el feminicidio a la sociedad","De qué manera el feminicidio repercute en la sociedad","Cuál es la influencia del feminicidio en la vida socia","Cómo impacta el feminicidio en la dinámica socia","Cuáles son las implicaciones del feminicidio en la sociedad"],
+        "responses": [
+            "El feminicidio tiene un impacto profundo en la sociedad, ya que perpetúa la desigualdad de género, crea un ambiente de miedo y desconfianza, y afecta a familias y comunidades enteras.",
+            "El feminicidio tiene un impacto devastador en la sociedad, generando un clima de miedo e inseguridad, especialmente entre las mujeres, lo que limita su libertad y calidad de vida.",
+            "El feminicidio conlleva costos significativos en términos de salud mental, servicios legales y médicos, y la pérdida de talento y potencial de las víctimas, afectando el desarrollo y la cohesión social."
         ]
     },
     
+
 
     {
         "tag": "desconocido",

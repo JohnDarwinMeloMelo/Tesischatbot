@@ -88,7 +88,7 @@ def webhook_whatsapp():
             
             general_mensaje=sentence_word
             #-------------------------------------------------VALIDACION _-__________
-            get_last_record_by_telefono()
+            #get_last_record_by_telefono()
             print("mensaje 1: "+general_mensaje)
             word_list = nltk.word_tokenize(sentence_word)
             sentence_words.extend(word_list)

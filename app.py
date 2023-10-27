@@ -21,6 +21,8 @@ from pattern.es import singularize
 nltk.download('stopwords')
 app = Flask(__name__)
 mensaje_global=""
+conversation_history = {}
+RemaPrincipal = ['genero', 'sexo', 'violencia', 'feminicidio']
 # Ruta para recibir las solicitudes de WhatsApp
 @app.route("/webhook/", methods=["POST", "GET"])
 def webhook_whatsapp():
@@ -90,6 +92,8 @@ def webhook_whatsapp():
             #-------------------------------------------------VALIDACION _-__________
             #get_last_record_by_telefono()
             print("mensaje 1: "+general_mensaje)
+            
+            
             word_list = nltk.word_tokenize(sentence_word)
             sentence_words.extend(word_list)
             bag = [0]*len(words)
@@ -100,24 +104,44 @@ def webhook_whatsapp():
             print(bag)
             return np.array(bag)
 
-        
+        def get_or_initialize_history(user_id):
+            if user_id in conversation_history:
+                return conversation_history[user_id]
+            else:
+                conversation_history[user_id] = []
+                return conversation_history[user_id]
+
+       
+            
+            
+        def add_to_history(user_id, message):
+            history = get_or_initialize_history(user_id)
+            if len(history) >= 2:
+                history.pop(0)  # Elimina el mensaje más antiguo si se alcanza el límite de 5
+            history.append(message)
         #Predecimos la categoría a la que pertenece la oración
         def predict_class(sentence):
+            history = get_or_initialize_history(telefonoCliente)
+            history_text = " ".join(history)
+            
+            
+            
+            sentence = sentence + " " + history_text
+
             bow = bag_of_words(sentence)
-            
-            
-            ####################
             has_ones = np.any(bow)
 
             if has_ones:
-                res = model.predict(np.array([bow]))[0]
-                max_index = np.where(res ==np.max(res))[0][0]
+                bow = bow.reshape(1, 1, len(bow))
+                res = model.predict(bow)[0]
+                max_index = np.where(res == np.max(res))[0][0]
                 category = classes[max_index]
             else:
                 category = "desconocido"
-            print(bow)        
             print(category)
             return category
+            
+
         
 
         
@@ -226,7 +250,8 @@ def webhook_whatsapp():
         
         ints = predict_class(mensaje)
         respuesta = get_response(ints, intents)
-        
+        # Agregar el mensaje actual a la conversación
+        add_to_history(telefonoCliente, mensaje)
         
         
         global general_mensaje

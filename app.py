@@ -89,11 +89,21 @@ def webhook_whatsapp():
             sentence_word = unidecode.unidecode(sentence_word.lower())
             
             general_mensaje=sentence_word
+            
             #-------------------------------------------------VALIDACION _-__________
+            history = get_or_initialize_history(telefonoCliente)
+            history_text = " ".join(history)
+            
+            
+            
+            sentence_word = sentence_word + " " + history_text
+            
+            
             #get_last_record_by_telefono()
-            print("mensaje 1: "+general_mensaje)
-            
-            
+            print("mensaje 1: "+sentence_word)
+            #añadir histirail memoria...............................................
+            add_to_history(telefonoCliente,general_mensaje)
+            #--------------------------------------------------------------------------------------
             word_list = nltk.word_tokenize(sentence_word)
             sentence_words.extend(word_list)
             bag = [0]*len(words)
@@ -121,12 +131,7 @@ def webhook_whatsapp():
             history.append(message)
         #Predecimos la categoría a la que pertenece la oración
         def predict_class(sentence):
-            history = get_or_initialize_history(telefonoCliente)
-            history_text = " ".join(history)
             
-            
-            
-            sentence = sentence + " " + history_text
 
             bow = bag_of_words(sentence)
             has_ones = np.any(bow)
@@ -251,7 +256,7 @@ def webhook_whatsapp():
         ints = predict_class(mensaje)
         respuesta = get_response(ints, intents)
         # Agregar el mensaje actual a la conversación
-        add_to_history(telefonoCliente, mensaje)
+       
         
         
         global general_mensaje

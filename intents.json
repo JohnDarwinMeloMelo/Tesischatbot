@@ -38,7 +38,7 @@
         },
         {
             "tag": "Despedida",
-            "patterns": ["Adiós", "Hasta luego",	"chao"],
+            "patterns": ["Adiós", "Hasta luego","chao"],
             "responses": [
                 "De nada, si tienes más preguntas en el futuro, no dudes en preguntar. ¡Cuídate!",
                 "Hasta luego. Siempre estoy aquí si necesitas más información o apoyo.",

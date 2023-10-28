@@ -22,7 +22,13 @@ nltk.download('stopwords')
 app = Flask(__name__)
 mensaje_global=""
 conversation_history = {}
-RemaPrincipal = ['genero', 'sexo', 'violencia', 'feminicidio']
+TemaPrincipal = ['hola','chao','noch','dia','tal','haz','buena','tard','noch','adio','luego'
+                 'sexo','orientacion','sexual','genero','perspectia','violencia','dolosa','ataque',
+                 'quimico','feminicidio','transfeminicidio','misoginia','acoso','vbg','heterosexualidad',
+                 'homosexualidad','bisexualidad','pansexualidad','asexualidad','demisexualidad','graysexualidad',
+                 'lesbiana','gay','transgénero','intersexual']
+
+
 # Ruta para recibir las solicitudes de WhatsApp
 @app.route("/webhook/", methods=["POST", "GET"])
 def webhook_whatsapp():
@@ -94,9 +100,35 @@ def webhook_whatsapp():
             history = get_or_initialize_history(telefonoCliente)
             history_text = " ".join(history)
             
+            # Dividir las oraciones en palabras
+            history_wordst = history_text.split()
+            sentence_wordst = sentence_word.split()
+
+            
+            s1=0
+            h1=0
+            # Verificar si alguna de las palabras clave se encuentra en las oraciones
+            for keyword in TemaPrincipal:
+                if keyword in history_wordst:
+                    h1=1+h1
+                if keyword in sentence_wordst:
+                    s1=1+h1
+            
+            if s1 >= 1 and h1 >= 1:
+                sentence_word = sentence_word
+                clear_history_by_telefonoCliente(telefonoCliente)
+                
+            else:
+                sentence_word = sentence_word + " " + history_text
             
             
-            sentence_word = sentence_word + " " + history_text
+            
+            
+            
+            
+            
+            
+            
             
             
             #get_last_record_by_telefono()
@@ -120,13 +152,17 @@ def webhook_whatsapp():
             else:
                 conversation_history[user_id] = []
                 return conversation_history[user_id]
+        
+        def clear_history_by_telefonoCliente(telefonoCliente):
+            if telefonoCliente in conversation_history:
+                del conversation_history[telefonoCliente]
 
        
             
             
         def add_to_history(user_id, message):
             history = get_or_initialize_history(user_id)
-            if len(history) >= 2:
+            if len(history) >= 3:
                 history.pop(0)  # Elimina el mensaje más antiguo si se alcanza el límite de 5
             history.append(message)
         #Predecimos la categoría a la que pertenece la oración

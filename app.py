@@ -22,12 +22,23 @@ nltk.download('stopwords')
 app = Flask(__name__)
 mensaje_global=""
 conversation_history = {}
-TemaPrincipal = ['hola','chao','noch','dia','tal','haz','buena','tard','noch','adio','luego'
-                 'sexo','orientacion','sexual','genero','perspectia','violencia','dolosa','ataque',
-                 'quimico','feminicidio','transfeminicidio','misoginia','acoso','vbg','heterosexualidad',
-                 'homosexualidad','bisexualidad','pansexualidad','asexualidad','demisexualidad','graysexualidad',
-                 'lesbiana','gay','transgénero','intersexual']
+TemaPrincipal = ['hola','chao','noch','dia','tal','haz','buena','tard','noch','adio','luego',
+    'sexo','orientacion','sexual','genero','perspectia','violencia','dolosa','ataque',
+    'quimico','feminicidio','transfeminicidio','misoginia','acoso','vbg','heterosexualidad',
+    'homosexualidad','bisexualidad','pansexualidad','asexualidad','demisexualidad','graysexualidad',
+    'lesbiana','gay','transgénero','intersexual']
 
+offensive_words = [
+    "arpía", "arribista", "baboso", "babosa", "bastardo", "bobo", "boba", "bocafloja", "bocona",
+    "buey", "burgués", "cabezahueca", "caca", "canijo", "canija", "chismoso", "chismosa", "cínico",
+    "cobarde", "cochino", "cochina", "dañada", "depravado", "depravada", "desgraciado", "desgraciada",
+    "déspota", "despreciable", "engendro", "engreído", "escoria", "fantoche", "gentuza", "guarro",
+    "garra", "guey", "hipócrita", "hocicón", "hocicona", "huevón", "huevona", "idiota", "iluso",
+    "ilusa", "imbécil", "inepto", "inepta", "infeliz", "ingrato", "ingrata", "insolente", "inútil",
+    "jodido", "jodida", "lambiscón", "lamehuevos", "lelo", "lela", "mamón", "mamona", "mandilón",
+    "marrano", "marrana", "menso", "mensa", "mierda", "nefasto", "nefasta", "odioso", "odiosa",
+    "orate", "patán", "pedorro", "pedorra", "pinche", "ratero", "ratera", "ruco"
+]
 
 # Ruta para recibir las solicitudes de WhatsApp
 @app.route("/webhook/", methods=["POST", "GET"])
@@ -58,6 +69,7 @@ def webhook_whatsapp():
         
         
         lemmatizer = WordNetLemmatizer()
+        lemmatized_offensive_words = [lemmatizer.lemmatize(word.lower()) for word in offensive_words]
 
         
         # Abre el archivo JSON con la codificación UTF-8
@@ -83,6 +95,16 @@ def webhook_whatsapp():
             print("mensaje 2: "+ mensaje2)
             return ' '.join(sentence_words)
 
+        def contar_palabras_clave(texto, palabras_clave):
+            palabras_en_texto = texto.split()
+            contador = 0
+            for palabra in palabras_en_texto:
+                if palabra.lower() in palabras_clave:
+                    contador += 1
+            return contador
+
+
+
         #Convertimos la información a unos y ceros según si están presentes en los patrones
         
         def bag_of_words(sentence):
@@ -100,22 +122,16 @@ def webhook_whatsapp():
             history = get_or_initialize_history(telefonoCliente)
             history_text = " ".join(history)
             
-            # Dividir las oraciones en palabras
-            history_wordst = history_text.split()
-            sentence_wordst = sentence_word.split()
-
             
-            s1=0
-            h1=0
-            # Verificar si alguna de las palabras clave se encuentra en las oraciones
-            for keyword in TemaPrincipal:
-                if keyword in history_wordst:
-                    h1=1+h1
-                if keyword in sentence_wordst:
-                    s1=1+h1
+            
+            
+            s1=contar_palabras_clave(sentence_word, TemaPrincipal)
+            h1=contar_palabras_clave(history_text, TemaPrincipal)
+                      
+             
             
             if s1 >= 1 and h1 >= 1:
-                sentence_word = sentence_word
+    
                 clear_history_by_telefonoCliente(telefonoCliente)
                 
             else:
@@ -134,7 +150,8 @@ def webhook_whatsapp():
             #get_last_record_by_telefono()
             print("mensaje 1: "+sentence_word)
             #añadir histirail memoria...............................................
-            add_to_history(telefonoCliente,general_mensaje)
+            add_to_history(telefonoCliente,sentence_word)
+            general_mensaje=sentence_word
             #--------------------------------------------------------------------------------------
             word_list = nltk.word_tokenize(sentence_word)
             sentence_words.extend(word_list)
@@ -180,7 +197,21 @@ def webhook_whatsapp():
             else:
                 category = "desconocido"
             print(category)
+            
+            if detect_insult(mensaje_global):
+                print("Mensaje ofensivo detectado.")
+                
+            
+            
+            
             return category
+        
+        def detect_insult(message):
+            message = message.lower()
+            for word in lemmatized_offensive_words:
+                if word in message:
+                    return True
+            return False
             
 
         

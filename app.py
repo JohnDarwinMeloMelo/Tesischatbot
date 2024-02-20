@@ -11,11 +11,13 @@ import torch
 import nltk
 import unidecode
 import mysql.connector
+import openai
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from keras.models import load_model
 import os
 from langdetect import detect 
+
 
 from pattern.es import singularize
 nltk.download('stopwords')
@@ -37,7 +39,8 @@ offensive_words = [
     "ilusa", "imbécil", "inepto", "inepta", "infeliz", "ingrato", "ingrata", "insolente", "inútil",
     "jodido", "jodida", "lambiscón", "lamehuevos", "lelo", "lela", "mamón", "mamona", "mandilón",
     "marrano", "marrana", "menso", "mensa", "mierda", "nefasto", "nefasta", "odioso", "odiosa",
-    "orate", "patán", "pedorro", "pedorra", "pinche", "ratero", "ratera", "ruco"
+    "orate", "patán", "pedorro", "pedorra", "pinche", "ratero", "ratera", "ruco","mk","jueputa","wey","puta",
+    "malparido","hp","gonorrea","hijueputa"
 ]
 
 # Ruta para recibir las solicitudes de WhatsApp
@@ -134,8 +137,8 @@ def webhook_whatsapp():
     
                 clear_history_by_telefonoCliente(telefonoCliente)
                 
-            else:
-                sentence_word = sentence_word + " " + history_text
+            #else:
+            #    sentence_word = sentence_word + " " + history_text
             
             
             
@@ -196,11 +199,8 @@ def webhook_whatsapp():
                 category = classes[max_index]
             else:
                 category = "desconocido"
-            print(category)
             
-            if detect_insult(mensaje_global):
-                print("Mensaje ofensivo detectado.")
-                
+            
             
             
             
@@ -321,15 +321,43 @@ def webhook_whatsapp():
         
         
         ints = predict_class(mensaje)
+        if detect_insult(mensaje):
+            ints = "insult"
         respuesta = get_response(ints, intents)
         # Agregar el mensaje actual a la conversación
        
         
         
         global general_mensaje
-        insert_data_to_database(idWA, general_mensaje, respuesta, timestamp, telefonoCliente)
+        #insert_data_to_database(idWA, general_mensaje, respuesta, timestamp, telefonoCliente)
         with open("texto.txt", "w", encoding="utf-8") as f:
             f.write(respuesta)
+
+       
+
+        def obtener_respuesta(prompt):
+            openai.api_key = "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"
+            modelo = 'gpt-3.5-turbo'
+            mensajes = [
+                {"role":"system","content":"Dame una respuesta corta "},
+                {"role":"system","content":"solo responde preguntas relaciondas con todo lo relacionado del tema de violencia basada en genero y genero como brindar (orientacion,informacion,asesoramiento,ayuda,definiciones) de los temas , si no es relacionado o no tenga que ver nada con violencia basada de genero y genero dime que solo respondes preguntas de ese tema "},
+                {"role":"user","content":prompt}
+            ]
+            respuesta = openai.ChatCompletion.create(
+                model=modelo,
+                messages=mensajes
+            )
+            return respuesta['choices'][0]['message']['content']
+
+        #pronpt = "violence"
+        
+    
+        if ints == "desconocido":
+            respuesta=obtener_respuesta(mensaje)
+        
+        
+        print(mensaje)
+
 
 
 

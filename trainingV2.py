@@ -126,7 +126,7 @@ model.add(Dense(len(train_y[0]), activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Entrenar el modelo
-train_process = model.fit(train_x, train_y, epochs=1000, batch_size=5, verbose=1)
+train_process = model.fit(train_x, train_y, epochs=100, batch_size=5, verbose=1)
 
 # Guardar el modelo
 model.save("chatbot_model.h5", train_process)

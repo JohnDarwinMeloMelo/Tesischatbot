@@ -339,8 +339,10 @@ def webhook_whatsapp():
             openai.api_key = "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"
             modelo = 'gpt-3.5-turbo'
             mensajes = [
-                {"role":"system","content":"Dame una respuesta corta "},
-                {"role":"system","content":"solo responde preguntas relaciondas con todo lo relacionado del tema de violencia basada en genero y genero como brindar (orientacion,informacion,asesoramiento,ayuda,definiciones) de los temas , si no es relacionado o no tenga que ver nada con violencia basada de genero y genero dime que solo respondes preguntas de ese tema "},
+                {"role":"system","content":"Dame una respuesta corta y respuestas solo sobre la violencia basada en genero "},
+                {"role":"system","content":"solo responde preguntas relaciondas con todo lo relacionado del tema de violencia basada en genero y genero como brindar (orientacion,informacion,asesoramiento,ayuda,definiciones) de los temas , si la pregunta no esta relacionado o no tenga que ver nada con violencia basada de genero y genero dime que solo respondes preguntas relacionadas sobre la (violencia basada en genero)"},
+                {"role":"system","content":"solo respuestas de violencia de genero di que solo no puedes reponder esa pregunta solo preguntas de violencia de genero"},
+                {"role":"system","content":"responder solo preguntas relacionadas con el tema violencia basada en genero y genero "},
                 {"role":"user","content":prompt}
             ]
             respuesta = openai.ChatCompletion.create(

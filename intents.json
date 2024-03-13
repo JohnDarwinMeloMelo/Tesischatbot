@@ -76,30 +76,13 @@
         },
         {
             "tag": "Urgente",
-            "patterns": ["Me golpea","Me agrede fisicamente","me obliga a tener relaciones sexuales","me viola","me amenaza de muerte","me amenaza con objetos o armas","me encierra","me aisla de seres queridos"],
+            "patterns": ["golpea","agrede fisicamente","obliga relaciones sexuales","viola","amenaza muerte","amenaza arma","encierra","aisla"],
             "responses": [
                 "Urgente🚨🚨 \nSi enfrentas estos comportamientos, Tu vida e integridad están en riesgo. Busca ayuda de inmediato. Comunícate con servicios de emergencia, contacta a personas de confianza y busca apoyo profesional. Prioriza tu seguridad y toma medidas para resguardar tu bienestar inmediato "
             
             ]
         },
-        {
-            "tag": "No_entendido",
-            "patterns": ["No entiendo", "No sé qué hacer", "Confundido"],
-            "responses": [
-                "Entiendo que puedas sentirte confundido. Estoy aquí para proporcionarte información relacionado con violencia basada en género. ¿En qué puedo aclararte las dudas?",
-                "No te preocupes si no entiendes algo. Estoy aquí para ayudarte a obtener la información relacionado con violencia basada en género que necesitas.",
-                "Si te sientes confundido, no dudes en preguntar más. Estoy aquí para aclarar tus dudas."
-            ]
-        },
-        {
-            "tag": "Informativo",
-            "patterns": ["Cuéntame más", "Más información", "Explícame"],
-            "responses": [
-                "Claro, puedo proporcionarte información sobre la violencia basada en género, sus tipos y cómo buscar ayuda. ¿En qué tema específico estás interesado?",
-                "Estoy aquí para proporcionarte información detallada sobre la violencia basada en género. ¿Sobre qué aspecto te gustaría saber más?",
-                "¡Claro! Si deseas más información sobre la violencia basada en género, no dudes en preguntar. Estoy aquí para ayudarte."
-            ]
-        },
+
         {
             "tag": "desconocido",
             "patterns": ["*"],
@@ -113,9 +96,9 @@
         },
         {
             "tag": "servicioDeAyuda",
-            "patterns": ["Servicios de ayuda","En qué lugar puedo encontrar ayuda","A dónde debo acudir para obtener ayuda","Cuál es el sitio adecuado para buscar apoyo","A quién puedo recurrir en busca de ayuda","Cuál es el lugar indicado para solicitar ayuda","En qué sitio puedo obtener orientación","contactos de ayuda","numeros de telefono"],
+            "patterns": ["Servicios de ayuda","numeros de telefono","lineas telefonicas"],
             "responses": [
-                "SEDE CENTRO \nUnidad de servicios psicológicos \n\n- Primer piso edificio Holanda \n- Tel: 602 7216535  \n\nUnidad de salud Maria Goretti \n- Bloque Administrativo \n- Tel: 602 7214965  \n\nSAN DAMIAN \nReportar en el área de primeros auxilios, en el bloque administrativo" 
+                "Estos son los servicios de ayuda que brinda la univerida CESMAG\nSEDE CENTRO \nUnidad de servicios psicológicos \n\n- Primer piso edificio Holanda \n- Tel: 602 7216535  \n\nUnidad de salud Maria Goretti \n- Bloque Administrativo \n- Tel: 602 7214965  \n\nSAN DAMIAN \nReportar en el área de primeros auxilios, en el bloque administrativo" 
                 
             ]
         },

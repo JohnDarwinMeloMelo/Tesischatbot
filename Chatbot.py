@@ -344,8 +344,8 @@ def webhook_whatsapp():
         return jsonify({"status": "error", "message": "No se recibió un mensaje válido"}, 400)
 
 def enviar(telefonoRecibe, respuesta):
-    token = 'EAALZBZB8exxfkBO1dKOrQIR2e3nZCNK9ZANZCo7VSkInr1aepGYWrvM3jSgjGnnwejZAkXaFrwNwRn4zzZCSP8hLhzr9QcSh3bAEKMbxxkVX8msLPGqDZAAtpeGhZBvQZCv5JVLA0MfJQQyRPu8Rt2NEkMoZCXIMs4qqxAHmGMvEc8k7PnaLO0EiVF7PayuTKRZC'  # Reemplaza con tu token de WhatsApp
-    idNumeroTelefono = '117836178073425'  # Reemplaza con tu ID de número de teléfono
+    token = ''  # Reemplaza con tu token de WhatsApp
+    idNumeroTelefono = ''  # Reemplaza con tu ID de número de teléfono
 
     mensajeWa = WhatsApp(token, idNumeroTelefono)
     telefonoRecibe = telefonoRecibe.replace("521", "52")

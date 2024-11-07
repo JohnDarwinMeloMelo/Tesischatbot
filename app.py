@@ -336,7 +336,7 @@ def webhook_whatsapp():
        
 
         def obtener_respuesta(prompt):
-            openai.api_key = "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"
+            openai.api_key = ""
             modelo = 'gpt-3.5-turbo'
             mensajes = [
                 {"role":"system","content":"Dame una respuesta corta y respuestas solo sobre la violencia basada en genero "},
